@@ -1,5 +1,5 @@
-Welcome to Pytch's documentation!
-=================================
+Pytch — A stepping stone from Scratch to Python
+===============================================
 
 .. toctree::
    :maxdepth: 2
