@@ -1,6 +1,12 @@
 Help for writing Pytch programs
 ===============================
 
+.. caution::
+
+   This documentation refers to an earlier version of Pytch.  We are
+   in the process of updating it to reflect the current version.
+
+
 Editing and compiling
 ---------------------
 
