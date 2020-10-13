@@ -5,3 +5,5 @@ Pytch — A stepping stone from Scratch to Python
    :maxdepth: 2
    :caption: Contents:
 
+   about
+   help
