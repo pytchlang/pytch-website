@@ -13,8 +13,9 @@ We also have some :doc:`documentation for developers <developer>`.
 
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents
+   :hidden:
 
-   about
+   webapp/index
    help
+   about
+   developer
