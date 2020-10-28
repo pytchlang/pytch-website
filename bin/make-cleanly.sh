@@ -19,9 +19,4 @@ cd "$REPO_ROOT" && (
     echo
     echo Rebuilding HTML
     make html
-
-    echo
-    echo Modifying built HTML
-    find build/html -name "*.html" -print0 \
-        | xargs -n1 -0 python "$REPO_ROOT"/bin/wrap_content.py
 )
