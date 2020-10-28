@@ -61,6 +61,12 @@ We rely heavily on the following two excellent projects:
 -  `Skulpt <https://skulpt.org/>`_ — an in-browser implementation of
    the Python language, on which we have built Pytch
 
+Licence
+-------
+
+TODO: Might be enough different licences involved to make it worth
+having a separate "licensing" doc?
+
 Email
 -----
 
