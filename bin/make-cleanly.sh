@@ -12,6 +12,8 @@ REPO_ROOT=$(git rev-parse --show-toplevel)
 cd "$REPO_ROOT" && (
     echo Working in $(pwd)
 
+    . venv/bin/activate
+
     echo
     echo Removing old build/html directory
     rm -r ./build/html
