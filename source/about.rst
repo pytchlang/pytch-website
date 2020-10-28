@@ -1,15 +1,6 @@
 About Pytch
 ===========
 
-.. caution::
-
-   This documentation refers to an earlier version of Pytch.  We are
-   in the process of updating it to reflect the current version.
-
-
-Summary
--------
-
 Pytch provides a stepping-stone in the journey from Scratch to Python.
 
 Motivation
