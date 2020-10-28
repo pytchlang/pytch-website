@@ -137,10 +137,10 @@ div.sphinxsidebar ul, div.sphinxsidebar ul ul {
 }
 
 div.toctree-wrapper li.toctree-l1 {
-    margin-top: 0.75rem;
+    margin-top: 0rem;
 }
 div.toctree-wrapper li.toctree-l2 {
-    margin-top: 0.222rem;
+    margin-top: 0rem;
 }
 
 div.toctree-wrapper li {
