@@ -10,5 +10,6 @@ documents might be useful:
 .. toctree::
    :hidden:
 
-   vm/internals/index
-   webapp/internals/index
+   VM <vm/internals/index>
+   Webapp <webapp/internals/index>
+   Website <./developer/index>
