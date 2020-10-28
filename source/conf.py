@@ -57,3 +57,20 @@ html_css_files = [
 ]
 
 html_sidebars = { "**": [ "globaltoc.html", "dochome.html" ] }
+
+pytch_fonts = ('"Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",'
+               + '"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",'
+               + '"Helvetica Neue", sans-serif')
+
+html_theme_options = {
+    "globaltoc_maxdepth": 3,
+    "bgcolor": "#ddf",
+    "headbgcolor": "#ddf",
+    "headtextcolor": "black",
+    "sidebarbgcolor": "#cce",
+    "sidebartextcolor": "black",
+    "sidebarlinkcolor": "black",
+    "bodyfont": pytch_fonts,
+    "headfont": pytch_fonts,
+    "body_max_width": None,
+}
