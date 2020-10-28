@@ -1,5 +1,5 @@
-Help for writing Pytch programs
-===============================
+Writing Pytch programs
+======================
 
 .. caution::
 
