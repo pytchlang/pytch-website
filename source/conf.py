@@ -55,3 +55,5 @@ html_static_path = ['_static']
 html_css_files = [
     "css/pytch-classic.css",
 ]
+
+html_sidebars = { "**": [ "globaltoc.html", "dochome.html" ] }
