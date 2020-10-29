@@ -1,15 +1,23 @@
 Pytch — A stepping stone from Scratch to Python
 ===============================================
 
-.. caution::
+Pytch provides a stepping-stone in the journey from Scratch to Python.
+You work in a Scratch-like environment, writing your Sprites' code in
+Python rather than assembling it from Scratch blocks.  To learn more:
 
-   This documentation refers to an earlier version of Pytch.  We are
-   in the process of updating it to reflect the current version.
+* :doc:`Using the Pytch webapp <webapp/user/index>`
+* :doc:`The Python language as used in Pytch <vm/user/index>`
+* :doc:`Writing Pytch programs <help>`
+* :doc:`About Pytch <about>`
+
+We also have some :doc:`documentation for developers <developer>`.
 
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents
+   :hidden:
 
-   about
+   webapp/user/index
+   vm/user/index
    help
+   about
+   developer

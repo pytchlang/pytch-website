@@ -12,6 +12,26 @@ REPO_ROOT=$(git rev-parse --show-toplevel)
 cd "$REPO_ROOT" && (
     echo Working in $(pwd)
 
+    setup_ok=yes
+    for lnk in vm webapp; do
+        if [ ! -e source/$lnk/index.rst ]; then
+            echo "No index.rst found under source/$lnk; check sibling repos"
+            setup_ok=no
+        fi
+    done
+
+    if [ ! -e venv/bin/python ]; then
+        echo "No Python virtualenv found in 'venv'"
+        setup_ok=no
+    fi
+
+    if [ $setup_ok = no ]; then
+        echo "Abandoning clean build"
+        exit 1;
+    fi
+
+    . venv/bin/activate
+
     echo
     echo Removing old build/html directory
     rm -r ./build/html
@@ -19,9 +39,4 @@ cd "$REPO_ROOT" && (
     echo
     echo Rebuilding HTML
     make html
-
-    echo
-    echo Modifying built HTML
-    find build/html -name "*.html" -print0 \
-        | xargs -n1 -0 python "$REPO_ROOT"/bin/wrap_content.py
 )

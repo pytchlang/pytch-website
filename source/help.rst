@@ -1,31 +1,31 @@
-Help for writing Pytch programs
-===============================
+Writing Pytch programs
+======================
 
-.. caution::
-
-   This documentation refers to an earlier version of Pytch.  We are
-   in the process of updating it to reflect the current version.
+In Pytch, you describe what you want the Sprites in your project to do
+by writing Python code.
 
 
-Editing and compiling
----------------------
+Editing and building
+--------------------
 
-You write and edit your Python program in the left panel. Unlike
+You write and edit your Python program in the top-left panel. Unlike
 Scratch, where changes take effect straight away, in Python you must
-*compile* your program first. In Pytch, this is done with the *COMPILE*
-button in the menu-bar at the top. Compiling can take several seconds
-for a complicated program. If there are errors in your program, a
-description of the problem will appear in the ‘Errors’ tab underneath
-the editor.
+*build* your program first. In Pytch, this is done with the *BUILD*
+button above the stage. Compiling can take a few seconds for a
+complicated program. If there are errors in your program, a
+description of the problem will appear in the ‘Errors’ tab of the
+information pane.
+
+It is a good idea to save your project's code often, with the *Save*
+button above the stage.
 
 Running and stopping
 --------------------
 
-Once your program compiles successfully, you can click on the stage and
+Once your program builds successfully, you can click on the stage and
 then use your program. Many projects will need the user to click the
-*green flag* (currently a rectangle), but not always. To stop all
-running scripts, hit the *red stop button*. The green flag and stop
-button are both below the stage.
+*green flag*. To stop all running scripts, hit the *red stop
+button*. The green flag and stop button are both above the stage.
 
 Sprites
 -------
@@ -52,12 +52,12 @@ from the ``pytch.Stage`` class. For example,
 Scripts
 -------
 
-The Pytch equivalent of a script for a sprite is a *method* on that
-sprite. For example,
+The Pytch equivalent of a Scratch script for a sprite is a *method* on
+that sprite. For example,
 
 .. code:: python
 
-       @pytch.when_key_pressed('ArrowUp')
+       @pytch.when_key_pressed("ArrowUp")
        def move_up(self):
            self.change_y_pos(10)
 
@@ -68,40 +68,17 @@ the *change y by* Scratch block.
 Costumes
 --------
 
-Your sprite must have at least one costume. These are given in a *class
+Your sprite usually has at least one costume. These are given in a *class
 attribute* called ``Costumes``, for example
 
 .. code:: python
 
    class Player(pytch.Sprite):
-       Costumes = {'python': ('pytch-images/python-logo.png', 25, 25)}
+       Costumes = ["python-logo.png"]
        # ... other code for Player ...
 
-The ``Costumes`` attribute is a Python dictionary. Each key is the name
-of that costume, to be used in ``switch_costume()`` calls. The value is
-a tuple of three things:
-
--  URL for graphics; currently PNG;
--  x-coordinate of the ‘centre’ of the sprite;
--  y-coordinate of the ‘centre’ of the sprite.
-
-See examples for how your program provides these pieces of information
-to Pytch. We have supplied a few sample costumes with this initial
-version; we intend to expand the collection in the future.
-
-Sample costumes
-~~~~~~~~~~~~~~~
-
-For this initial release, these costumes are available:
-
--  ``pytch-images/balloon.png`` — a balloon with string
--  ``pytch-images/ball.png`` — a small ball
--  ``pytch-images/player-1.png`` — the *Pong* paddle used for player 1
-   in the demo
--  ``pytch-images/player-2.png`` — the *Pong* paddle used for player 2
-   in the demo
--  ``pytch-images/python-logo.png`` — the Python logo
--  ``pytch-images/star.png`` — a small yellow star
+More details on how you tell Pytch what Costumes to use are available
+in a separate document.  (TODO: Link to it.)
 
 Stage backdrops
 ---------------
@@ -112,21 +89,13 @@ same form as a Sprite’s ``Costumes`` attribute, for example
 .. code:: python
 
    class Stage(pytch.Stage):
-       Backdrops = {'pong': 'pytch-images/backdrop.png'}
+       Backdrops = ["starry-sky.jpg"]
        # ... other code for Stage ...
 
 The image should 480 pixels wide and 360 high.
 
-The current implementation only supports one backdrop, so its name
-(‘``pong``’ in the above example) is not used.
-
-Sample backdrops
-~~~~~~~~~~~~~~~~
-
-For this initial release, these backdrops are available:
-
--  ``pytch-images/backdrop.png``
--  ``pytch-images/midnightblue.png``
+More details on how you tell Pytch what Backdrops to use are available
+in a separate document.  (TODO: Link to it.)
 
 Sounds
 ------
@@ -137,33 +106,11 @@ called ``Sounds``, for example
 .. code:: python
 
    class Player(pytch.Sprite):
-       Sounds = {'pop': 'pytch-audio/pop.mp3'}
+       Sounds = ["pop.mp3"]
        # ... other code for Player ...
 
-The ``Sounds`` attribute is a Python dictionary. Each key is the name of
-that sound, to be used in a ``start_sound()`` block. The value is a URL
-for the sound file. We have provided a handful of example sounds for
-this initial version.
-
-See the examples for how this works.
-
-Sample sounds
-~~~~~~~~~~~~~
-
-For this initial release, these sounds are available:
-
--  ``pytch-sounds/Ping Pong Hit.mp3``
--  ``pytch-sounds/pop.mp3``
-
-Music
-~~~~~
-
-Pytch supports music blocks using the soundfont-player library. Like
-Scratch there can be one instrument selected at any time, and one tempo
-(in bpm) that determines how long notes play for. When a new instrument
-is selected the soundfont is loaded from the internet (the next
-statement of the function won’t run until this has completed).
-Soundfonts are cached for a particular run of the program.
+More details on how you tell Pytch what Sounds to use are available
+in a separate document.  (TODO: Link to it.)
 
 Equivalents to Scratch blocks
 -----------------------------
@@ -184,12 +131,6 @@ Methods on a ``Sprite``
 -  ``self.set_y_pos(y)`` sets the Sprite’s x coordinate to ``y``
 -  ``self.go_to_xy(x, y)`` sets the Sprite’s current x and y coordinates
    to ``x`` and ``y`` respectively
--  ``self.glide_to(target, n_seconds)`` sets off a glide of the Sprite
-   which will take ``n_seconds`` seconds and end up at the ``target``;
-   currently the only supported target is ``'random'``
--  ``self.glide_to_xy(target_x, target_y, n_seconds)`` sets off a glide
-   of the Sprite which will take ``n_seconds`` seconds and end up at the
-   location (``x``, ``y``)
 -  ``self.show()`` makes the Sprite be visible
 -  ``self.hide()`` makes the Sprite be not visible
 -  ``self.switch_costume(costume_name)`` sets the Sprite’s costume to
@@ -202,11 +143,16 @@ Methods on a ``Sprite``
    with name ``sound_name``; the script continues with the sound playing
    in the background
 
+TODO: Finish this summary list.
+
 Methods on the stage
 ~~~~~~~~~~~~~~~~~~~~
 
 In future we hope to implement the various Stage-only blocks from
 Scratch, for example ``next_backdrop()``.
+
+TODO: We do have switch-backdrop; describe this.
+
 
 Functions within the ``pytch`` module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -218,29 +164,15 @@ Functions within the ``pytch`` module
    amount of time; fixing this is on the roadmap
 -  ``pytch.broadcast(message_string)`` broadcasts the message
    ``message_string``, launching any scripts with a matching
-   ``@when_I_receive()`` decorator (hat-block); the script calling
+   ``@pytch.when_I_receive()`` decorator (hat-block); the script calling
    ``broadcast()`` continues, with the responses happening concurrently
--  ``pytch.broadcast_and_wait(message_string)`` broadcasts the message
+- ``pytch.broadcast_and_wait(message_string)`` broadcasts the message
    ``message_string``, launching any scripts with a matching
-   ``@when_I_receive()`` decorator (hat-block); the script calling
-   ``broadcast()`` waits until all those scripts have finished before
-   continuing
+   ``@pytch.when_I_receive()`` decorator (hat-block); the script
+   calling ``broadcast_and_wait()`` waits until all those scripts have
+   finished before continuing
 -  ``pytch.key_is_pressed(key_name)`` gives a true/false answer as to
    whether the key with name ``key_name`` is currently pressed
--  ``pytch.show_variable(owner, name)`` makes the variable within
-   ``owner`` (e.g., a Sprite) called ``name`` be visible
--  ``pytch.set_instrument_to()`` lets you change the instrument for the
-   music blocks. The argument is a string which is the name of a
-   soundfont to be loaded (here:
-   https://github.com/danigb/soundfont-player/blob/master/instruments.json
-   are all the names you can use).
--  ``pytch.play_note_for`` lets you play a note for a given number of
-   beats. The first argument is either a string with the name (in
-   Scientific Note Notation) of a note (e.g. ‘C4’ or ‘A2’), or an
-   integer (Midi note number).
--  ``pytch.set_tempo_to()`` sets the tempo (in bpm) to a number. The
-   default is 60.
--  ``pytch_change_tempo_by()`` adds the argument to the tempo.
 
 Scratch ‘hat’ blocks
 --------------------
@@ -249,57 +181,29 @@ Done via Python *decorators*. E.g.,
 
 .. code:: python
 
-       @when_I_receive('Play_One_Point')
+       @pytch.when_I_receive("Play_One_Point")
        def prepare_to_play(self):
            # ... do stuff ...
 
 The available decorators are:
 
--  ``@when_I_receive(message_string)`` causes the decorated method to be
-   called whenever somebody broadcasts the given ``message_string``
--  ``@when_green_flag_clicked()`` causes the decorated method to be
-   called whenever the green flag is clicked by the user
--  ``@when_key_pressed(key_name_as_string)`` causes the decorated method
-   to be called whenever the user presses the given key
--  ``@when_this_sprite_clicked()`` causes the decorated method to be
-   called whenever the user clicks / taps on the sprite
-
-Final last pieces of a Pytch program
-------------------------------------
-
-We are working on reducing the amount of boilerplate required, but
-currently there is still a small amount.
-
-You must *import* the Pytch module at the top of your program, by
-writing
-
-.. code:: python
-
-   import pytch
-
-After defining all your Sprite-derived classes, and your Stage-derived
-class, you must register them all with code along the lines of
-
-.. code:: python
-
-   pytch.register_stage_class(Stage)
-   pytch.register_sprite_class(Player)
-   pytch.register_sprite_class(Star)
-
-and then the last line of your Python program should be
-
-.. code:: python
-
-   pytch.run()
-
-to launch the project!
+* ``@pytch.when_I_receive(message_string)`` causes the decorated
+  method to be called whenever somebody broadcasts the given
+  ``message_string``
+* ``@pytch.when_green_flag_clicked()`` causes the decorated method to
+  be called whenever the green flag is clicked by the user
+* ``@pytch.when_key_pressed(key_name_as_string)`` causes the decorated
+  method to be called whenever the user presses the given key
+* ``@pytch.when_this_sprite_clicked()`` causes the decorated method to
+  be called whenever the user clicks / taps on the sprite
 
 Errors
 ------
 
 If there is an error in your Python program, this will be shown in the
-red-backed ‘Errors’ tab. Currently the error messages are given in their
-raw form; providing more useful messages is on the roadmap.
+‘Errors’ tab of the information pane.  The error report includes
+clickable buttons to take you to the point in your code which caused
+the problem.
 
 Multitasking
 ------------
@@ -310,6 +214,9 @@ script is triggered, before the screen is updated. The exceptions are:
 -  when an ‘and wait’ call is made, e.g., ``broadcast_and_wait()``;
 -  during a ``while`` or ``for`` loop: one iteration of the loop runs
    per display frame.
+
+TODO: Other syscalls also suspend for a frame; check and document
+this.
 
 One consequence of this is that if you have a very complex piece of
 processing inside an event handler, your project might appear to have

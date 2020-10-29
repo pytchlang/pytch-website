@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+.NavBar {
+  flex: 0;
+  background-color: #228;
+  color: white;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.NavBar a {
+    text-decoration: none;
+}
+.NavBar h1 {
+    padding: 8px;
+    margin: 0px 2rem;
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+.NavBar h1:hover, .NavBar li:hover {
+    background-color: #44b;
+    border-radius: 4px;
+}
+.NavBar ul {
+    margin: 0px;
+}
+.NavBar ul li {
+    display: inline-block;
+    margin-right: 2rem;
+    padding: 8px;
+    font-size: 1.25rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+.NavBar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/******************************************************************************/
+
+body {
+    font-size: 1.05rem;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.body p, div.body dd, div.body li, div.body blockquote {
+    line-height: 150%;
+}
+
+div.document {
+    min-height: 0px;
+    flex: 1 1;
+    display: flex;
+    /* Sphinx emits the document first then the sidebar, so to get the
+     * sidebar on the left we reverse the flex direction. */
+
+    /*
+     * TODO: Look at making it appear in sidebar2 block instead?
+     */
+
+    flex-direction: row-reverse;
+    overflow-y: auto;
+}
+
+div.documentwrapper {
+    float: none;
+    width: auto;
+    flex: 1 1;
+}
+
+div.bodywrapper {
+    margin: 0px;
+}
+
+div.body > div.section {
+    padding: 2rem 3rem;
+}
+
+div.sphinxsidebar {
+    width: 18rem;
+    flex: 0 0 auto;
+    margin: 0px;
+    float: none;
+}
+
+div.sphinxsidebar p.caption {
+    text-transform: uppercase;
+}
+
+div.sphinxsidebar ul, div.sphinxsidebar p.caption {
+    margin-left: 1rem;
+}
+
+div.sphinxsidebar p.caption {
+    padding-left: 4px;
+}
+
+div.sphinxsidebar ul li.toctree-l1 {
+    margin: 1rem 0px;
+}
+
+div.sphinxsidebar ul li.toctree-l2 {
+    margin: 0.3333rem 0px;
+}
+
+div.sphinxsidebar ul li.toctree-l1 > a {
+    font-weight: bold;
+}
+
+.admonition.caution {
+    background-color: #ffd;
+    padding: 1rem;
+    margin: 2rem 3rem;
+    border-radius: 4px;
+}
+
+div.toctree-wrapper p.caption {
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+
+div.sphinxsidebar ul, div.sphinxsidebar ul ul {
+    list-style-type: none;
+}
+
+div.toctree-wrapper li.toctree-l1 {
+    margin-top: 0rem;
+}
+div.toctree-wrapper li.toctree-l2 {
+    margin-top: 0rem;
+}
+
+div.toctree-wrapper li {
+    padding: 4px;
+    border-radius: 4px;
+}
+
+div.document a:hover {
+    text-decoration: none;
+    background-color: #99f;
+    color: black;
+}
+
+div.docs-home-link a, div.documentwrapper a, div.sphinxsidebar a {
+    display: inline-block;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+div.docs-home-link {
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+div.docs-home-link hr {
+    border-width: 0px;
+    height: 1px;
+    margin: 2rem 1.25rem 1rem 0.25rem;
+    background-color: #228;
+}

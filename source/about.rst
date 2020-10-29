@@ -1,15 +1,6 @@
 About Pytch
 ===========
 
-.. caution::
-
-   This documentation refers to an earlier version of Pytch.  We are
-   in the process of updating it to reflect the current version.
-
-
-Summary
--------
-
 Pytch provides a stepping-stone in the journey from Scratch to Python.
 
 Motivation
@@ -60,6 +51,12 @@ We rely heavily on the following two excellent projects:
    environment, whose ideas are the motivation behind Pytch
 -  `Skulpt <https://skulpt.org/>`_ — an in-browser implementation of
    the Python language, on which we have built Pytch
+
+Licence
+-------
+
+TODO: Might be enough different licences involved to make it worth
+having a separate "licensing" doc?
 
 Email
 -----

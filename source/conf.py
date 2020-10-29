@@ -28,7 +28,6 @@ author = 'Ben North, Glenn Strong'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "sphinx_rtd_theme",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -45,7 +44,8 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "sphinx_rtd_theme"
+html_theme = "classic"
+html_copy_source = False
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -53,5 +53,24 @@ html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 
 html_css_files = [
-    "css/pytch.css",
+    "css/pytch-classic.css",
 ]
+
+html_sidebars = { "**": [ "globaltoc.html", "dochome.html" ] }
+
+pytch_fonts = ('"Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",'
+               + '"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",'
+               + '"Helvetica Neue", sans-serif')
+
+html_theme_options = {
+    "globaltoc_maxdepth": 3,
+    "bgcolor": "#ddf",
+    "headbgcolor": "#ddf",
+    "headtextcolor": "black",
+    "sidebarbgcolor": "#cce",
+    "sidebartextcolor": "black",
+    "sidebarlinkcolor": "black",
+    "bodyfont": pytch_fonts,
+    "headfont": pytch_fonts,
+    "body_max_width": None,
+}
