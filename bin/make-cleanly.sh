@@ -33,8 +33,9 @@ cd "$REPO_ROOT" && (
     . venv/bin/activate
 
     echo
-    echo Removing old build/html directory
+    echo Removing old build directory
     rm -r ./build/html
+    rm -r ./build/doctrees
 
     echo
     echo Rebuilding HTML
