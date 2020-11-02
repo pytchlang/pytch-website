@@ -36,7 +36,17 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+#
+# Ignore the index.rst files used for standalone/development builds of
+# the VM and webapp documentations, otherwise they override the
+# parent/child relationships between the docs.  The effect of this was
+# that the sidebar ToC was not expanding properly under the "Developer
+# documentation" entry.
+#
+exclude_patterns = [
+    "vm/index.rst",
+    "webapp/index.rst",
+]
 
 
 # -- Options for HTML output -------------------------------------------------
