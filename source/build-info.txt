@@ -1,0 +1,5 @@
+This content is a placeholder; it will be replaced with real build
+info by build process.  It will be a table of (repo, commit-id) pairs
+along the lines of:
+
+pytch-vm            0000111122223333444455556666777788889999
