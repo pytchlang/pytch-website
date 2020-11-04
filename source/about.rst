@@ -55,8 +55,13 @@ We rely heavily on the following two excellent projects:
 Licence
 -------
 
-TODO: Might be enough different licences involved to make it worth
-having a separate "licensing" doc?
+See separate page:
+
+.. toctree::
+   :maxdepth: 1
+
+   licensing
+
 
 Email
 -----
