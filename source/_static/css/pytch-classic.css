@@ -45,6 +45,15 @@
 
 /******************************************************************************/
 
+div.warning-work-in-progress {
+    background-color: #ff8;
+    color: black;
+    text-align: center;
+}
+
+
+/******************************************************************************/
+
 body {
     font-size: 1.05rem;
     position: absolute;
