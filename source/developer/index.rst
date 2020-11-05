@@ -32,3 +32,7 @@ user-level sections of the documentation by the top-level
 ``developer/`` directory is brought in to the developer-level sections
 by ``pytch-website/doc/source/developer.rst``.  The website repo also
 has its own developer documentation, of which this page is part.
+
+The sibling respository ``pytch-build`` is also brought in, although
+its contents are entirely intended for developers, so there is no
+further division into 'user' vs 'developer'.
