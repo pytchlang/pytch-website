@@ -73,14 +73,14 @@ div.document {
     min-height: 0px;
     flex: 1 1;
     display: flex;
-    /* Sphinx emits the document first then the sidebar, so to get the
-     * sidebar on the left we reverse the flex direction. */
 
-    /*
+    /* Sphinx emits the document first then the sidebar, so to get the
+     * sidebar on the left we reverse the flex direction.
+     *
      * TODO: Look at making it appear in sidebar2 block instead?
      */
-
     flex-direction: row-reverse;
+
     overflow-y: auto;
 }
 

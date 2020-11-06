@@ -9,6 +9,7 @@ Python rather than assembling it from Scratch blocks.  To learn more:
 * :doc:`The Python language as used in Pytch <vm/user/index>`
 * :doc:`Writing Pytch programs <help>`
 * :doc:`About Pytch <about>`
+* :doc:`Contact us! <contact>`
 
 We also have some :doc:`documentation for developers <developer>`.
 
@@ -20,4 +21,5 @@ We also have some :doc:`documentation for developers <developer>`.
    vm/user/index
    help
    about
+   contact
    developer

@@ -8,6 +8,7 @@ documents might be useful:
 * :doc:`Webapp (developer guide) <webapp/developer/index>`
 * :doc:`Help section of site (developer guide) <./developer/index>`
 * :doc:`Tools for writing a tutorial <./build-tools/tutorialcompiler/index>`
+* :doc:`Using an external editor <./build-tools/live-reload/index>`
 * :doc:`Tools for building and deploying the site <./build-tools/makesite/index>`
 * :doc:`Source and build information <./source-build>`
 
@@ -18,5 +19,6 @@ documents might be useful:
    Webapp <webapp/developer/index>
    Website <./developer/index>
    build-tools/tutorialcompiler/index
+   build-tools/live-reload/index
    build-tools/makesite/index
    source-build
