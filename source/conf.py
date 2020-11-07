@@ -49,6 +49,8 @@ exclude_patterns = [
     "build-tools/index.rst",
 ]
 
+primary_domain = "py"
+
 
 # -- Options for HTML output -------------------------------------------------
 
