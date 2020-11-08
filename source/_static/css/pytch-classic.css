@@ -157,13 +157,18 @@ div.toctree-wrapper li {
     border-radius: 4px;
 }
 
+div.document a {
+    padding: 2px;
+    border-radius: 2px;
+}
+
 div.document a:hover {
     text-decoration: none;
     background-color: #99f;
     color: black;
 }
 
-div.docs-home-link a, div.documentwrapper a, div.sphinxsidebar a {
+div.docs-home-link li > a, div.documentwrapper li > a, div.sphinxsidebar li > a {
     display: inline-block;
     padding: 3px;
     border-radius: 3px;
