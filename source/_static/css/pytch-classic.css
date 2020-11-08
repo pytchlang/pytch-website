@@ -170,14 +170,13 @@ div.docs-home-link a, div.documentwrapper a, div.sphinxsidebar a {
 }
 
 div.docs-home-link {
-    margin-left: 1rem;
     font-weight: bold;
 }
 
 div.docs-home-link hr {
     border-width: 0px;
     height: 1px;
-    margin: 2rem 1.25rem 1rem 0.25rem;
+    margin: 2rem 1.25rem 1rem 1.25rem;
     background-color: #228;
 }
 
