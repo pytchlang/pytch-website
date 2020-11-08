@@ -19,7 +19,6 @@ We also have some :doc:`documentation for developers <developer>`.
 
    webapp/user/index
    vm/user/index
-   help
    about
    contact
    developer
