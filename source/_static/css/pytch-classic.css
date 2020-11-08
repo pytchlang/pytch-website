@@ -188,6 +188,15 @@ div.docs-home-link hr {
 
 /******************************************************************************/
 
+div[class*="highlight-"] {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+div[class*="highlight-"] > div.highlight > pre {
+    padding: 1rem;
+}
+
 dl:not([class]) > dt {
     font-weight: bold;
     margin-bottom: 0.5rem;
