@@ -129,6 +129,10 @@ div.sphinxsidebar ul li.toctree-l1 > a {
     font-weight: bold;
 }
 
+div.sphinxsidebar ul li[class*="toctree-"] a.current {
+    background-color: #aaf;
+}
+
 .admonition.caution {
     background-color: #ffd;
     padding: 1rem;
