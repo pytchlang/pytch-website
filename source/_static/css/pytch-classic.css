@@ -140,6 +140,10 @@ div.sphinxsidebar ul li[class*="toctree-"] a.current {
     border-radius: 4px;
 }
 
+div.contents.local > ul {
+    margin-bottom: 1rem;
+}
+
 div.toctree-wrapper p.caption {
     margin-top: 2rem;
     text-transform: uppercase;
@@ -187,6 +191,10 @@ div.docs-home-link hr {
     height: 1px;
     margin: 2rem 1.25rem 1rem 1.25rem;
     background-color: #228;
+}
+
+span.pre {
+    padding: 2px;
 }
 
 
