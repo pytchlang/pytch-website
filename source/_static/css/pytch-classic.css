@@ -129,11 +129,19 @@ div.sphinxsidebar ul li.toctree-l1 > a {
     font-weight: bold;
 }
 
+div.sphinxsidebar ul li[class*="toctree-"] a.current {
+    background-color: #aaf;
+}
+
 .admonition.caution {
     background-color: #ffd;
     padding: 1rem;
     margin: 2rem 3rem;
     border-radius: 4px;
+}
+
+div.contents.local > ul {
+    margin-bottom: 1rem;
 }
 
 div.toctree-wrapper p.caption {
@@ -157,26 +165,77 @@ div.toctree-wrapper li {
     border-radius: 4px;
 }
 
+div.document a {
+    padding: 2px;
+    border-radius: 2px;
+}
+
 div.document a:hover {
     text-decoration: none;
     background-color: #99f;
     color: black;
 }
 
-div.docs-home-link a, div.documentwrapper a, div.sphinxsidebar a {
+div.docs-home-link li > a, div.documentwrapper li > a, div.sphinxsidebar li > a {
     display: inline-block;
     padding: 3px;
     border-radius: 3px;
 }
 
 div.docs-home-link {
-    margin-left: 1rem;
     font-weight: bold;
 }
 
 div.docs-home-link hr {
     border-width: 0px;
     height: 1px;
-    margin: 2rem 1.25rem 1rem 0.25rem;
+    margin: 2rem 1.25rem 1rem 1.25rem;
     background-color: #228;
+}
+
+span.pre {
+    padding: 2px;
+}
+
+
+/******************************************************************************/
+
+div[class*="highlight-"] {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+div[class*="highlight-"] > div.highlight > pre {
+    padding: 1rem;
+}
+
+dl:not([class]) > dt {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+dl.py.function {
+    margin-bottom: 0.5rem;
+    padding: 2px;
+    padding-top: 6px;  /* Compensate for empty <DD> */
+
+    /* As pygments: */
+    background-color: #eeffcc;
+    border: 1px solid #ac9;
+    border-left: none;
+    border-right: none;
+}
+
+dl.py.function + p {
+    margin-top: 0.5rem;
+}
+
+code.descclassname, code.descname {
+    font-size: 1.2rem;
+    padding: 0px;
+}
+
+/* First-order approximation to italic correction: */
+.sig-param + .sig-paren {
+    margin-left: 0.1111rem;
 }
