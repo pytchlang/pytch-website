@@ -6,8 +6,7 @@ You work in a Scratch-like environment, writing your Sprites' code in
 Python rather than assembling it from Scratch blocks.  To learn more:
 
 * :doc:`Using the Pytch webapp <webapp/user/index>`
-* :doc:`The Python language as used in Pytch <vm/user/index>`
-* :doc:`Writing Pytch programs <help>`
+* :doc:`Writing Pytch programs <vm/user/index>`
 * :doc:`About Pytch <about>`
 * :doc:`Contact us! <contact>`
 
