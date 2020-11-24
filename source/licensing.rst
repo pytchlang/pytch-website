@@ -2,7 +2,8 @@ Copyright and licence
 =====================
 
 
-Pytch is made available under the MIT licence:
+The code making up the Pytch system itself is made available under the
+MIT licence:
 
     Copyright © 2019–2020 Ben North and Trinity College Dublin
 
