@@ -5,6 +5,9 @@ The Pytch system is created from a handful of separate Git
 repositories, and building the website documentation assumes a certain
 structure for how they are checked out on the developer's machine.
 
+TODO: Explain how this can be achieved via the 'superproject'
+``pytch-releases``.
+
 Within each of the two contributing repositories (``pytch-vm`` and
 ``pytch-webapp``), the documentation is expected to stick to the
 following convention for providing *user-level* and *developer*
