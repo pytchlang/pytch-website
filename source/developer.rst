@@ -11,6 +11,7 @@ documents might be useful:
 * :doc:`Using an external editor <./build-tools/live-reload/index>`
 * :doc:`Tools for building and deploying the site <./build-tools/makesite/index>`
 * :doc:`Source and build information <./source-build>`
+* :doc:`Release Changelog <releases/changelog>`
 
 .. toctree::
    :hidden:
@@ -22,3 +23,4 @@ documents might be useful:
    build-tools/live-reload/index
    build-tools/makesite/index
    source-build
+   releases/changelog
