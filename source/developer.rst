@@ -4,6 +4,7 @@ Developer documentation
 If you are interested in working on Pytch itself, the following
 documents might be useful:
 
+* :doc:`Getting started with Pytch development <./developer/development-setup>`
 * :doc:`Pytch VM (developer guide) <vm/developer/index>`
 * :doc:`Webapp (developer guide) <webapp/developer/index>`
 * :doc:`Help section of site (developer guide) <./developer/index>`
@@ -16,6 +17,7 @@ documents might be useful:
 .. toctree::
    :hidden:
 
+   Development setup <./developer/development-setup>
    VM <vm/developer/index>
    Webapp <webapp/developer/index>
    Website <./developer/index>
