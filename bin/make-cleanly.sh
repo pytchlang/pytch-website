@@ -34,8 +34,8 @@ cd "$REPO_ROOT" && (
 
     echo
     echo Removing old build directory
-    rm -r ./build/html
-    rm -r ./build/doctrees
+    rm -rf ./build/html
+    rm -rf ./build/doctrees
 
     echo
     echo Rebuilding HTML
