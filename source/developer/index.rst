@@ -4,9 +4,10 @@ Pytch website (developer guide)
 The Pytch system is created from a handful of separate Git
 repositories, and building the website documentation assumes a certain
 structure for how they are checked out on the developer's machine.
-
-TODO: Explain how this can be achieved via the 'superproject'
-``pytch-releases``.
+The required structure can be achieved by using the git 'superproject'
+`pytch-releases <https://github.com/pytchlang/pytch-releases>`_.  More
+information on this is available under
+:doc:`development-setup`.
 
 Within each of the two contributing repositories (``pytch-vm`` and
 ``pytch-webapp``), the documentation is expected to stick to the
