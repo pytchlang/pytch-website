@@ -8,7 +8,7 @@ cd "$REPO_ROOT"
 LAYER_DIR=website-layer/layer-content
 
 if [ -e venv -o -e $LAYER_DIR ]; then
-    echo "Must be run in a clean clone"
+    echo "Must be run in a clean workdir"
     echo '(i.e., no "venv" or "'"$LAYER_DIR"'")'
     exit 1
 fi
@@ -21,7 +21,7 @@ fi
 BUILDINFOFILE=source/build-info.txt
 
 if [ ! -e "$BUILDINFOFILE" ]; then
-    echo Could not find source/build-info.txt in clone
+    echo Could not find '"'$BUILDINFOFILE'"' in workdir
     exit 1
 fi
 
