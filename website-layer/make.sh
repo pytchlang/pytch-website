@@ -21,7 +21,7 @@ fi
 BUILDINFOFILE=source/build-info.txt
 
 if [ ! -e "$BUILDINFOFILE" ]; then
-    echo Could not find source/build-info.txt in clone
+    echo Could not find '"'$BUILDINFOFILE'"' in clone
     exit 1
 fi
 
