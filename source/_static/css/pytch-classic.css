@@ -214,10 +214,9 @@ dl:not([class]) > dt {
     margin-bottom: 0.5rem;
 }
 
-dl.py.function, dl.py.attribute {
+dl.py.function dt, dl.py.attribute dt {
     margin-bottom: 0.5rem;
-    padding: 2px;
-    padding-top: 6px;  /* Compensate for empty <DD> */
+    padding: 4px 0px 6px;
 
     /* As pygments: */
     background-color: #eeffcc;
