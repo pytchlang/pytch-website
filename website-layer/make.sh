@@ -8,8 +8,10 @@ cd "$REPO_ROOT"
 LAYER_DIR=website-layer/layer-content
 
 if [ -e venv -o -e $LAYER_DIR ]; then
-    echo "Must be run in a clean workdir"
-    echo '(i.e., no "venv" or "'"$LAYER_DIR"'")'
+    (
+        echo "Must be run in a clean workdir"
+        echo '(i.e., no "venv" or "'"$LAYER_DIR"'")'
+    ) >&2
     exit 1
 fi
 
@@ -21,15 +23,19 @@ fi
 BUILDINFOFILE=source/build-info.txt
 
 if [ ! -e "$BUILDINFOFILE" ]; then
-    echo Could not find '"'$BUILDINFOFILE'"' in workdir
+    (
+        echo Could not find '"'$BUILDINFOFILE'"' in workdir
+    ) >&2
     exit 1
 fi
 
 cat /dev/null > $BUILDINFOFILE
 
 if [ ! -e ../.git ]; then
-    echo 'Parent repo not found; must be run as git submodule'
-    echo 'within pytch-releases'
+    (
+        echo 'Parent repo not found; must be run as git submodule'
+        echo 'within pytch-releases'
+    ) >&2
     exit 1
 fi
 
@@ -45,7 +51,9 @@ for sibling in \
 ; do
     sibling_repo=../$sibling
     if [ ! -e "$sibling_repo"/.git ]; then
-        echo 'Sibling repo "'"$sibling"'" not found'
+        (
+            echo 'Sibling repo "'"$sibling"'" not found'
+        ) >&2
         exit 1
     fi
     sha=$(git ls-remote $sibling_repo HEAD | grep -v refs/remotes | cut -f 1)
