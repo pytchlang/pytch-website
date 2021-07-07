@@ -242,3 +242,7 @@ code.descclassname, code.descname {
 .sig-param + .sig-paren {
     margin-left: 0.1111rem;
 }
+
+div.highlight span.hll {
+    background-color: #ddd;
+}
