@@ -214,6 +214,10 @@ dl:not([class]) > dt {
     margin-bottom: 0.5rem;
 }
 
+dl.py.function, dl.py.attribute {
+    margin-top: 1.25rem;
+}
+
 dl.py.function dt, dl.py.attribute dt {
     margin-bottom: 0.5rem;
     padding: 4px 0px 6px;
