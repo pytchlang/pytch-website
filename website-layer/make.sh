@@ -60,6 +60,7 @@ done
 
 virtualenv -p python3 venv
 source venv/bin/activate
+pip install --upgrade pip
 pip install -r requirements_dev.txt
 
 ./bin/make-cleanly.sh
