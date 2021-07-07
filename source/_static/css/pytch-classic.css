@@ -215,9 +215,12 @@ dl:not([class]) > dt {
 }
 
 dl.py.function, dl.py.attribute {
+    margin-top: 1.25rem;
+}
+
+dl.py.function dt, dl.py.attribute dt {
     margin-bottom: 0.5rem;
-    padding: 2px;
-    padding-top: 6px;  /* Compensate for empty <DD> */
+    padding: 4px 0px 6px;
 
     /* As pygments: */
     background-color: #eeffcc;
@@ -238,4 +241,8 @@ code.descclassname, code.descname {
 /* First-order approximation to italic correction: */
 .sig-param + .sig-paren {
     margin-left: 0.1111rem;
+}
+
+div.highlight span.hll {
+    background-color: #ddd;
 }
