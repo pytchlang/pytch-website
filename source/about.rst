@@ -1,7 +1,7 @@
 About Pytch
 ===========
 
-Pytch provides a stepping-stone in the journey from Scratch to Python.
+Pytch provides a bridge in the journey from Scratch to Python.
 
 Motivation
 ----------
