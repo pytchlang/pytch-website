@@ -50,4 +50,9 @@ The ``tmux`` terminal multiplexer
   Linux and Mac machines.  It appears to be usable on Windows with
   some effort, although we have not verified this.
 
+GNU ``coreutils``
+  The build scripts use ``realpath`` from GNU ``coreutils``.  Most
+  Linux-based systems will install these tools by default.  On macOS
+  you may need to run ``brew install coreutils``.
+
 (This list might be incomplete; please let us know of any gaps.)
