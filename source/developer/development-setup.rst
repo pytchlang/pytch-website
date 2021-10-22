@@ -25,7 +25,10 @@ Requirements
 
 Python 3
   The build tools, for example for building tutorials, are based on
-  version 3 of Python.
+  version 3 of Python.  Note that on macOS, you need to have run the
+  ``Install Certificates`` command, as is suggested by the Python
+  installer, to ensure that the Python's package installer ``pip`` can
+  make secure connections.
 
 Node.js
   For building the Skulpt-based VM, and the webapp.  Pytch is
@@ -46,5 +49,10 @@ The ``tmux`` terminal multiplexer
   The dev-server script requires ``tmux``, which is available for
   Linux and Mac machines.  It appears to be usable on Windows with
   some effort, although we have not verified this.
+
+GNU ``coreutils``
+  The build scripts use ``realpath`` from GNU ``coreutils``.  Most
+  Linux-based systems will install these tools by default.  On macOS
+  you may need to run ``brew install coreutils``.
 
 (This list might be incomplete; please let us know of any gaps.)
