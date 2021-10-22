@@ -25,7 +25,10 @@ Requirements
 
 Python 3
   The build tools, for example for building tutorials, are based on
-  version 3 of Python.
+  version 3 of Python.  Note that on macOS, you need to have run the
+  ``Install Certificates`` command, as is suggested by the Python
+  installer, to ensure that the Python's package installer ``pip`` can
+  make secure connections.
 
 Node.js
   For building the Skulpt-based VM, and the webapp.  Pytch is
