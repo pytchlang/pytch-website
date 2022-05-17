@@ -15,11 +15,11 @@ finishing with a suggestion to run a ``dev-server.sh`` script.
 
 You only need to run ``develop.sh`` once.
 
-That script should launch various webservers, and launch a browser
-running the webapp.  This should support live reload, so if you make a
-small visible change to the UI, for example changing a button's text,
-it should be reflected in the browser within a couple of seconds of
-saving the file from your editor/IDE.
+The ``dev-server.sh`` script should launch various webservers, and
+launch a browser running the webapp.  This should support live reload,
+so if you make a small visible change to the UI, for example changing
+a button's text, it should be reflected in the browser within a couple
+of seconds of saving the file from your editor/IDE.
 
 
 Requirements
