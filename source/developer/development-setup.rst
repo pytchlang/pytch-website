@@ -13,6 +13,8 @@ update the submodules' content, and will appear to be doing nothing
 for a short while.  You should then see messages indicating progress,
 finishing with a suggestion to run a ``dev-server.sh`` script.
 
+You only need to run ``develop.sh`` once.
+
 That script should launch various webservers, and launch a browser
 running the webapp.  This should support live reload, so if you make a
 small visible change to the UI, for example changing a button's text,
