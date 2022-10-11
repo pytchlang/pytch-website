@@ -70,3 +70,40 @@ GNU ``coreutils``
   you may need to run ``brew install coreutils``.
 
 (This list might be incomplete; please let us know of any gaps.)
+
+
+Developing on Windows
+---------------------
+
+The preferred way to do development work on Pytch within Windows is to
+do so under the Windows Subsystem for Linux.  Follow `Microsoft's
+instructions <https://learn.microsoft.com/en-us/windows/wsl/install>`_
+to set up what amounts to an Ubuntu virtual machine inside your
+Windows machine.
+
+(If you encounter an error like
+
+   Error: 0xc03a001a The requested operation could not be completed due
+   to a virtual disk system limitation.  Virtual hard disk files must be
+   uncompressed and unencrypted and must not be sparse.
+
+then `this blog post <https://utf9k.net/blog/wsl2-vhd-issue/>`_
+describes how the author solved it.)
+
+Once you have WSL set up, within your Ubuntu distribution run:
+
+.. code-block:: shell
+
+   sudo apt update
+   sudo apt install python3-virtualenv unzip
+
+and then install ``nvm`` following the instructions in `its README
+<https://github.com/nvm-sh/nvm>`_.
+
+Once this is all done, you should be able to follow the main
+instructions above, starting with cloning the ``pytch-releases``
+super-project.
+
+If you would like to use Microsoft's VSCode for development work, you
+can run your native Windows VSCode, and access your Ubuntu files using
+a Windows pathname starting ``\\wsl$\Ubuntu\home\your_username\``.
