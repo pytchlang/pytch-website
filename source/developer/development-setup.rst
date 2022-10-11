@@ -54,11 +54,11 @@ Python 3
 Node.js
   For building the Skulpt-based VM, and the webapp.  Pytch is
   developed using the v14 Long Term Support release of Node.js.  The
-  ``npm`` package manager is also required.  It usually comes bundled
-  with Node.js.  Your operating system might come with a different
-  version of Node.js.  A convenient way to manage multiple
-  ``node``/``npm`` versions on your machine is to use `the nvm tool
-  <https://github.com/nvm-sh/nvm>`_.
+  ``npm`` package manager is also required, which usually comes
+  bundled with Node.js.  Your operating system might come with
+  different versions of ``node`` and/or ``npm``.  A convenient way to
+  manage multiple ``node``/``npm`` versions on your machine is to use
+  `the nvm tool <https://github.com/nvm-sh/nvm>`_.
 
 Docker
   Optional, for :ref:`easy testing of a built
