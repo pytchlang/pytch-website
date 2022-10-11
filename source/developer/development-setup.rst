@@ -66,8 +66,9 @@ Docker
 
 The ``tmux`` terminal multiplexer
   The dev-server script requires ``tmux``, which is available for
-  Linux and Mac machines.  It appears to be usable on Windows with
-  some effort, although we have not verified this.
+  Linux and Mac machines.  It is also available on Windows, under the
+  Windows Subsystem for Linux (:ref:`see below
+  <developing_on_Windows>`).
 
 GNU ``coreutils``
   The build scripts use ``realpath`` from GNU ``coreutils``.  Most
