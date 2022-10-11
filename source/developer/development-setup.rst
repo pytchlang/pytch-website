@@ -21,6 +21,20 @@ so if you make a small visible change to the UI, for example changing
 a button's text, it should be reflected in the browser within a couple
 of seconds of saving the file from your editor/IDE.
 
+By default, the development webserver listens for connections from
+other machines on your local network.  This can be useful in some
+settings, but in other settings you might prefer to only allow
+connections from your development machine.  If so, you can launch the
+``dev-server.sh`` script with the environment variable ``HOST`` set to
+``localhost``.  This can be done with the shell command
+
+.. code-block:: shell
+
+   HOST=localhost ./pytch-build/makesite/local-server/dev-server.sh
+
+(assuming your shell is currently in the top-level ``pytch-releases``
+directory).
+
 
 Requirements
 ------------
