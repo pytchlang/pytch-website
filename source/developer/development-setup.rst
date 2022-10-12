@@ -43,6 +43,15 @@ connections from your development machine.  If so, you can launch the
 (assuming your shell is currently in the top-level ``pytch-releases``
 directory).
 
+.. note::
+
+   If you get an error ``duplicate session: pytchdev`` when trying to
+   run the ``dev-server.sh`` script, this is probably because you
+   closed the terminal window running a previous invocation of the
+   ``dev-server.sh`` script without typing ``Ctrl-C``\ s.  To fix the
+   error, run ``tmux kill-session -t pytchdev`` and then run the
+   ``dev-server.sh`` script again.
+
 
 Requirements
 ------------
