@@ -26,6 +26,9 @@ so if you make a small visible change to the UI, for example changing
 a button's text, it should be reflected in the browser within a couple
 of seconds of saving the file from your editor/IDE.
 
+To exit, type ``Ctrl-C`` repeatedly until you're back at your shell
+prompt.
+
 By default, the development webserver listens for connections from
 other machines on your local network.  This can be useful in some
 settings, but in other settings you might prefer to only allow
