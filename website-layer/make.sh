@@ -5,7 +5,7 @@ cd_or_fail() { cd "$1" || exit 1; }
 BUILD_DIR="$(realpath "$(dirname "$0")")"
 REPO_ROOT="$(realpath "$BUILD_DIR"/..)"
 
-cd "$REPO_ROOT"
+cd_or_fail "$REPO_ROOT"
 
 LAYER_DIR=website-layer/layer-content
 
@@ -79,7 +79,7 @@ mkdir "$LAYER_DIR"
 mv build/html "$LAYER_DIR"/doc
 
 (
-    cd "$LAYER_DIR"
+    cd_or_fail "$LAYER_DIR"
     find doc -type d -print0 | xargs -0 chmod 755
     find doc -type f -print0 | xargs -0 chmod 644
     zip -r ../layer.zip doc
