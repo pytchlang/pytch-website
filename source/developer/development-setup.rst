@@ -120,7 +120,7 @@ Once you have WSL set up, within your Ubuntu distribution run:
 .. code-block:: shell
 
    sudo apt update
-   sudo apt install python3-virtualenv unzip
+   sudo apt install unzip
 
 and then install ``nvm`` following the instructions in `its README
 <https://github.com/nvm-sh/nvm>`_.
