@@ -1,16 +1,15 @@
 #!/bin/bash
 
-git status > /dev/null
-if [ $? != 0 ]; then
+if ! git status > /dev/null; then
     echo "Abandoning clean build"
-    exit 1;
+    exit 1
 fi
 
 
 REPO_ROOT=$(git rev-parse --show-toplevel)
 
 cd "$REPO_ROOT" && (
-    echo Working in $(pwd)
+    echo Working in "$(pwd)"
 
     setup_ok=yes
     for lnk in vm webapp; do
@@ -30,6 +29,7 @@ cd "$REPO_ROOT" && (
         exit 1;
     fi
 
+    # shellcheck disable=SC1091
     . venv/bin/activate
 
     echo
