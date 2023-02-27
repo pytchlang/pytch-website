@@ -9,7 +9,7 @@ cd_or_fail "$REPO_ROOT"
 
 LAYER_DIR=website-layer/layer-content
 
-if [ -e venv -o -e "$LAYER_DIR" ]; then
+if [ -e venv ] || [ -e "$LAYER_DIR" ]; then
     (
         echo "Must be run in a clean workdir"
         echo '(i.e., no "venv" or "'"$LAYER_DIR"'")'
