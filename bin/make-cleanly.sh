@@ -10,7 +10,7 @@ fi
 REPO_ROOT=$(git rev-parse --show-toplevel)
 
 cd "$REPO_ROOT" && (
-    echo Working in $(pwd)
+    echo Working in "$(pwd)"
 
     setup_ok=yes
     for lnk in vm webapp; do

@@ -9,7 +9,7 @@ cd_or_fail "$REPO_ROOT"
 
 LAYER_DIR=website-layer/layer-content
 
-if [ -e venv -o -e $LAYER_DIR ]; then
+if [ -e venv -o -e "$LAYER_DIR" ]; then
     (
         echo "Must be run in a clean workdir"
         echo '(i.e., no "venv" or "'"$LAYER_DIR"'")'
@@ -31,7 +31,7 @@ if [ ! -e "$BUILDINFOFILE" ]; then
     exit 1
 fi
 
-cat /dev/null > $BUILDINFOFILE
+cat /dev/null > "$BUILDINFOFILE"
 
 if [ ! -e ../.git ]; then
     (
@@ -42,7 +42,7 @@ if [ ! -e ../.git ]; then
 fi
 
 sha=$(git ls-remote .. HEAD | grep -v refs/remotes | cut -f 1)
-printf "%-19s %s\n" pytch-releases $sha >> $BUILDINFOFILE
+printf "%-19s %s\n" pytch-releases "$sha" >> "$BUILDINFOFILE"
 
 for sibling in \
         pytch-build \
@@ -58,8 +58,8 @@ for sibling in \
         ) >&2
         exit 1
     fi
-    sha=$(git ls-remote $sibling_repo HEAD | grep -v refs/remotes | cut -f 1)
-    printf "%-19s %s\n" $sibling $sha >> $BUILDINFOFILE
+    sha=$(git ls-remote "$sibling_repo" HEAD | grep -v refs/remotes | cut -f 1)
+    printf "%-19s %s\n" "$sibling" "$sha" >> "$BUILDINFOFILE"
 done
 
 
@@ -90,4 +90,4 @@ mv build/html "$LAYER_DIR"/doc
 #
 # Restore build-info file to avoid cluttering git status
 
-git checkout -- $BUILDINFOFILE
+git checkout -- "$BUILDINFOFILE"
