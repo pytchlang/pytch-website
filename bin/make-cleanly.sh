@@ -30,6 +30,7 @@ cd "$REPO_ROOT" && (
         exit 1;
     fi
 
+    # shellcheck disable=SC1091
     . venv/bin/activate
 
     echo
