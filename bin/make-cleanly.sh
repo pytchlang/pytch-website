@@ -1,7 +1,6 @@
 #!/bin/bash
 
-git status > /dev/null
-if [ $? != 0 ]; then
+if ! git status > /dev/null; then
     echo "Abandoning clean build"
     exit 1
 fi
