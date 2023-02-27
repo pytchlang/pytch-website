@@ -3,7 +3,7 @@
 git status > /dev/null
 if [ $? != 0 ]; then
     echo "Abandoning clean build"
-    exit 1;
+    exit 1
 fi
 
 
