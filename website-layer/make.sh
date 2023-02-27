@@ -68,7 +68,7 @@ done
 # Create content and zip it
 
 
-virtualenv -p python3 venv
+python3 -m venv venv
 # shellcheck disable=SC1091
 source venv/bin/activate
 pip install --upgrade pip
