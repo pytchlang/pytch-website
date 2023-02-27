@@ -63,6 +63,11 @@ Python 3
   installer, to ensure that the Python's package installer ``pip`` can
   make secure connections.
 
+Poetry
+  For managing Python projects and their dependencies.  See `its web
+  page <https://python-poetry.org/docs/#installation>`_ for
+  installation instructions.
+
 Node.js
   For building the Skulpt-based VM, and the webapp.  Pytch is
   developed using the v14 Long Term Support release of Node.js.  The
