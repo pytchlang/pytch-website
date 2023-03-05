@@ -46,6 +46,7 @@ templates_path = ['_templates']
 exclude_patterns = [
     "vm/index.rst",
     "webapp/index.rst",
+    "medialib/index.rst",
     "build-tools/index.rst",
 ]
 
