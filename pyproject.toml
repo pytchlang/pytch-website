@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Content for Pytch website"
 authors = ["Ben North <ben.north@tcd.ie>"]
 readme = "README.rst"
-packages = [{include = "pytch_website"}]
+packages = []
 
 [tool.poetry.dependencies]
 python = "^3.10"
