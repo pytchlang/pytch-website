@@ -9,6 +9,7 @@ Python rather than assembling it from Scratch blocks.  To learn more:
 * :doc:`Writing Pytch programs <vm/user/index>`
 * :doc:`About Pytch <about>`
 * :doc:`Contact us! <contact>`
+* :doc:`Legal information <legal/index>`
 
 We also have some :doc:`documentation for developers <developer>`.
 
@@ -21,3 +22,4 @@ We also have some :doc:`documentation for developers <developer>`.
    about
    contact
    developer
+   legal/index
