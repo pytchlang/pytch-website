@@ -1,11 +1,5 @@
 #!/bin/bash
 
-if ! git status > /dev/null; then
-    echo "Abandoning clean build"
-    exit 1
-fi
-
-
 REPO_ROOT=$(git rev-parse --show-toplevel)
 
 cd "$REPO_ROOT" && (
