@@ -18,6 +18,21 @@ if [ -e venv ] || [ -e .venv ] || [ -e "$LAYER_DIR" ]; then
     exit 1
 fi
 
+# Poetry seems to want a keyring even if doing an operation which
+# doesn't need one.  Tell it to use a null one.
+PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
+export PYTHON_KEYRING_BACKEND
+
+n_poetry_envs=$(poetry env list | wc -l)
+
+if [ "$n_poetry_envs" -ne 0 ]; then
+    (
+        echo "Must be run in a clean clone"
+        echo "(no existing poetry environment)"
+    ) >& 2
+    exit 1
+fi
+
 
 ########################################################################
 #
