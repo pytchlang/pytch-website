@@ -83,12 +83,9 @@ done
 #
 # Create content and zip it
 
-
-python3 -m venv venv
-# shellcheck disable=SC1091
-source venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements_dev.txt
+poetry env use -q python3
+poetry install
+source "$(poetry env info --path)"/bin/activate
 
 ./bin/make-cleanly.sh
 
