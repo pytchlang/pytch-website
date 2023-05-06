@@ -9,11 +9,27 @@ cd_or_fail "$REPO_ROOT"
 
 LAYER_DIR=website-layer/layer-content
 
-if [ -e venv ] || [ -e "$LAYER_DIR" ]; then
+# Leave the "venv" check even though we now use poetry.
+if [ -e venv ] || [ -e .venv ] || [ -e "$LAYER_DIR" ]; then
     (
         echo "Must be run in a clean workdir"
-        echo '(i.e., no "venv" or "'"$LAYER_DIR"'")'
+        echo '(i.e., no "venv" or ".venv" or "'"$LAYER_DIR"'")'
     ) >&2
+    exit 1
+fi
+
+# Poetry seems to want a keyring even if doing an operation which
+# doesn't need one.  Tell it to use a null one.
+PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
+export PYTHON_KEYRING_BACKEND
+
+n_poetry_envs=$(poetry env list | wc -l)
+
+if [ "$n_poetry_envs" -ne 0 ]; then
+    (
+        echo "Must be run in a clean clone"
+        echo "(no existing poetry environment)"
+    ) >& 2
     exit 1
 fi
 
@@ -67,12 +83,9 @@ done
 #
 # Create content and zip it
 
-
-python3 -m venv venv
-# shellcheck disable=SC1091
-source venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements_dev.txt
+poetry env use -q python3
+poetry install
+source "$(poetry env info --path)"/bin/activate
 
 ./bin/make-cleanly.sh
 

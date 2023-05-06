@@ -1,11 +1,5 @@
 #!/bin/bash
 
-if ! git status > /dev/null; then
-    echo "Abandoning clean build"
-    exit 1
-fi
-
-
 REPO_ROOT=$(git rev-parse --show-toplevel)
 
 cd "$REPO_ROOT" && (
@@ -19,18 +13,10 @@ cd "$REPO_ROOT" && (
         fi
     done
 
-    if [ ! -e venv/bin/python ]; then
-        echo "No Python virtualenv found in 'venv'"
-        setup_ok=no
-    fi
-
     if [ $setup_ok = no ]; then
         echo "Abandoning clean build"
         exit 1;
     fi
-
-    # shellcheck disable=SC1091
-    . venv/bin/activate
 
     echo
     echo Removing old build directory
