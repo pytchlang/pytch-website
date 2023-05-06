@@ -66,6 +66,7 @@ for sibling in \
         pytch-webapp \
         pytch-website \
         pytch-tutorials \
+        pytch-medialib \
 ; do
     sibling_repo=../$sibling
     if [ ! -e "$sibling_repo"/.git ]; then
