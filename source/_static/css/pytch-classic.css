@@ -92,8 +92,8 @@ div.bodywrapper {
     margin: 0px;
 }
 
-div.body > div.section {
-    padding: 2rem 3rem;
+div.body > section {
+    padding: 2rem 1.5rem;
 }
 
 div.sphinxsidebar {
