@@ -72,7 +72,7 @@ html_css_files = [
 
 html_sidebars = { "**": [ "globaltoc.html", "dochome.html" ] }
 
-pytch_fonts = ('"Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",'
+pytch_fonts = ('-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",'
                + '"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",'
                + '"Helvetica Neue", sans-serif')
 
