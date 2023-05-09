@@ -93,3 +93,10 @@ read, including, by way of examples,
 * `requirements_dev.txt` files
 
 Such files are hereby placed into the public domain.
+
+
+## Image and sound content
+
+The Pytch logo, as found in the `favicon.ico` file, is Copyright 2023
+Trinity College Dublin.  All rights relating to this work are
+reserved.
