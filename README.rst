@@ -6,16 +6,24 @@ Pytch Website Content
 Development setup
 -----------------
 
-To set up a virtualenv for development::
+This project uses `poetry <https://python-poetry.org/>`_.
 
-  python3 -m venv venv
-  source venv/bin/activate
-  pip install -r requirements_dev.txt
+To set up a virtualenv for development and testing::
 
-To develop documentation with live-reload::
+  poetry install
+
+which will cause *poetry* to create a virtual environment in a
+``.venv`` folder.
+
+For live reload while editing docs, first enter a shell which has the
+poetry virtualenv activated by doing::
+
+  poetry shell
+
+then within that shell, run::
 
   sphinx-autobuild --re-ignore '/\.#' source build/html
 
-and visit the URL mentioned in the output.  (The ``--re-ignore
+and then visit the URL mentioned in the output.  (The ``--re-ignore
 '/\.#'`` avoids Emacs auto-save files; other editors might require
 something analogous.)
