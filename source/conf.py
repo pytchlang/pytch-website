@@ -47,7 +47,6 @@ exclude_patterns = [
     "vm/index.rst",
     "webapp/index.rst",
     "medialib/index.rst",
-    "build-tools/index.rst",
 ]
 
 primary_domain = "py"

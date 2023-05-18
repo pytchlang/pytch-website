@@ -23,8 +23,6 @@ documents might be useful:
    Webapp <webapp/developer/index>
    Media library <medialib/developer/index>
    Website <./developer/index>
-   build-tools/tutorialcompiler/index
-   build-tools/live-reload/index
-   build-tools/makesite/index
+   Tools <./build-tools/index>
    source-build
    releases/changelog
