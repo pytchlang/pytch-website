@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Pytch'
-copyright = '2020, Ben North, Glenn Strong'
+copyright = '2020–2023, Ben North, Glenn Strong, Trinity College Dublin'
 author = 'Ben North, Glenn Strong'
 
 
