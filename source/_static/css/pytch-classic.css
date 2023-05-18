@@ -158,11 +158,6 @@ div.toctree-wrapper li.toctree-l2 {
     margin-top: 0rem;
 }
 
-div.toctree-wrapper li {
-    padding: 4px;
-    border-radius: 4px;
-}
-
 div.document a {
     padding: 2px;
     border-radius: 2px;
@@ -204,10 +199,12 @@ div[class*="highlight-"] {
 }
 
 div[class*="highlight-"] > div.highlight > pre {
-    padding: 1rem;
+    font-size: 0.95rem;
+    padding: 0.5rem;
 }
 
-dl:not([class]) > dt {
+dl:not([class]) > dt,
+dl.simple > dt {
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
