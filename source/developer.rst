@@ -5,6 +5,7 @@ If you are interested in working on Pytch itself, the following
 documents might be useful:
 
 * :doc:`Getting started with Pytch development <./developer/development-setup>`
+* :doc:`Overview of Pytch design <./developer/design-overview>`
 * :doc:`Pytch VM (developer guide) <vm/developer/index>`
 * :doc:`Webapp (developer guide) <webapp/developer/index>`
 * :doc:`Media library (developer guide) <medialib/developer/index>`
@@ -19,6 +20,7 @@ documents might be useful:
    :hidden:
 
    Development setup <./developer/development-setup>
+   Design overview <./developer/design-overview>
    VM <vm/developer/index>
    Webapp <webapp/developer/index>
    Media library <medialib/developer/index>
