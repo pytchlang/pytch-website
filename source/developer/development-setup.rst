@@ -13,12 +13,15 @@ Python 3
   version 3 of Python.  Note that on macOS, you need to have run the
   ``Install Certificates`` command, as is suggested by the Python
   installer, to ensure that the Python's package installer ``pip`` can
-  make secure connections.
+  make secure connections.  The command ``python`` must launch Python
+  3 — on Ubuntu, you can install the package ``python-is-python3`` to
+  achieve this.
 
 Poetry
   For managing Python projects and their dependencies.  See `its web
   page <https://python-poetry.org/docs/#installation>`_ for
-  installation instructions.
+  installation instructions.  You might have to update your ``PATH``,
+  for example by adding a line to your ``.bashrc`` file.
 
 Node.js
   For building the Skulpt-based VM, and the webapp.  Pytch is
@@ -27,7 +30,9 @@ Node.js
   bundled with Node.js.  Your operating system might come with
   different versions of ``node`` and/or ``npm``.  A convenient way to
   manage multiple ``node``/``npm`` versions on your machine is to use
-  `the nvm tool <https://github.com/nvm-sh/nvm>`_.
+  `the nvm tool <https://github.com/nvm-sh/nvm>`_.  After installing
+  ``nvm``, you can do ``nvm install v14`` to set up the appropriate
+  version of node.
 
 Docker
   Optional, for :ref:`easy testing of a built
