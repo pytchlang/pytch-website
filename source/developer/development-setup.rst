@@ -118,6 +118,8 @@ instructions <https://learn.microsoft.com/en-us/windows/wsl/install>`_
 to set up what amounts to an Ubuntu virtual machine inside your
 Windows machine.
 
+This sometimes involves a reboot.
+
 (If you encounter an error like
 
    Error: 0xc03a001a The requested operation could not be completed due
