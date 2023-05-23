@@ -1,6 +1,10 @@
 Getting started with Pytch development
 ======================================
 
+This section explains how to get a development environment set up to
+work on Pytch itself.
+
+
 Requirements
 ------------
 
