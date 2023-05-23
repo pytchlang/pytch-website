@@ -148,3 +148,17 @@ super-project.
 If you would like to use Microsoft's VSCode for development work, you
 can run your native Windows VSCode, and access your Ubuntu files using
 a Windows pathname starting ``\\wsl$\Ubuntu\home\your_username\``.
+
+Home directories
+~~~~~~~~~~~~~~~~
+
+Be aware that your Windows home directory and your Ubuntu home
+directory are different.  For example, when setting up SSH keys, you
+need to ensure you are working within your *Ubuntu* home directory.
+After launching WSL, you can use the shell command
+
+.. code-block:: shell
+
+   cd
+
+to change to your Ubuntu home directory.
