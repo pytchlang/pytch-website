@@ -1,6 +1,60 @@
 Getting started with Pytch development
 ======================================
 
+This section explains how to get a development environment set up to
+work on Pytch itself.
+
+
+Requirements
+------------
+
+Python 3
+  The build tools, for example for building tutorials, are based on
+  version 3 of Python.  Note that on macOS, you need to have run the
+  ``Install Certificates`` command, as is suggested by the Python
+  installer, to ensure that the Python's package installer ``pip`` can
+  make secure connections.  The command ``python`` must launch Python
+  3 — on Ubuntu, you can install the package ``python-is-python3`` to
+  achieve this.
+
+Poetry
+  For managing Python projects and their dependencies.  See `its web
+  page <https://python-poetry.org/docs/#installation>`_ for
+  installation instructions.  You might have to update your ``PATH``,
+  for example by adding a line to your ``.bashrc`` file.
+
+Node.js
+  For building the Skulpt-based VM, and the webapp.  Pytch is
+  developed using the v14 Long Term Support release of Node.js.  The
+  ``npm`` package manager is also required, which usually comes
+  bundled with Node.js.  Your operating system might come with
+  different versions of ``node`` and/or ``npm``.  A convenient way to
+  manage multiple ``node``/``npm`` versions on your machine is to use
+  `the nvm tool <https://github.com/nvm-sh/nvm>`_.  After installing
+  ``nvm``, you can do ``nvm install v14`` to set up the appropriate
+  version of node.
+
+Docker
+  Optional, for :ref:`easy testing of a built
+  zipfile<testing_deployment_zipfile>`.
+
+The ``tmux`` terminal multiplexer
+  The dev-server script requires ``tmux``, which is available for
+  Linux and Mac machines.  It is also available on Windows, under the
+  Windows Subsystem for Linux (:ref:`see below
+  <developing_on_Windows>`).
+
+GNU ``coreutils``
+  The build scripts use ``realpath`` from GNU ``coreutils``.  Most
+  Linux-based systems will install these tools by default.  On macOS
+  you may need to run ``brew install coreutils``.
+
+(This list might be incomplete; please let us know of any gaps.)
+
+
+Source code
+-----------
+
 Pytch source code is available on GitHub, organised into git
 submodules.  The most convenient way to work with it is via the
 superproject:
@@ -53,48 +107,6 @@ directory).
    ``dev-server.sh`` script again.
 
 
-Requirements
-------------
-
-Python 3
-  The build tools, for example for building tutorials, are based on
-  version 3 of Python.  Note that on macOS, you need to have run the
-  ``Install Certificates`` command, as is suggested by the Python
-  installer, to ensure that the Python's package installer ``pip`` can
-  make secure connections.
-
-Poetry
-  For managing Python projects and their dependencies.  See `its web
-  page <https://python-poetry.org/docs/#installation>`_ for
-  installation instructions.
-
-Node.js
-  For building the Skulpt-based VM, and the webapp.  Pytch is
-  developed using the v14 Long Term Support release of Node.js.  The
-  ``npm`` package manager is also required, which usually comes
-  bundled with Node.js.  Your operating system might come with
-  different versions of ``node`` and/or ``npm``.  A convenient way to
-  manage multiple ``node``/``npm`` versions on your machine is to use
-  `the nvm tool <https://github.com/nvm-sh/nvm>`_.
-
-Docker
-  Optional, for :ref:`easy testing of a built
-  zipfile<testing_deployment_zipfile>`.
-
-The ``tmux`` terminal multiplexer
-  The dev-server script requires ``tmux``, which is available for
-  Linux and Mac machines.  It is also available on Windows, under the
-  Windows Subsystem for Linux (:ref:`see below
-  <developing_on_Windows>`).
-
-GNU ``coreutils``
-  The build scripts use ``realpath`` from GNU ``coreutils``.  Most
-  Linux-based systems will install these tools by default.  On macOS
-  you may need to run ``brew install coreutils``.
-
-(This list might be incomplete; please let us know of any gaps.)
-
-
 .. _developing_on_Windows:
 
 Developing on Windows
@@ -105,6 +117,8 @@ do so under the Windows Subsystem for Linux.  Follow `Microsoft's
 instructions <https://learn.microsoft.com/en-us/windows/wsl/install>`_
 to set up what amounts to an Ubuntu virtual machine inside your
 Windows machine.
+
+This sometimes involves a reboot.
 
 (If you encounter an error like
 
@@ -123,7 +137,11 @@ Once you have WSL set up, within your Ubuntu distribution run:
    sudo apt install unzip
 
 and then install ``nvm`` following the instructions in `its README
-<https://github.com/nvm-sh/nvm>`_.
+<https://github.com/nvm-sh/nvm>`_ and install node v14 by running
+
+.. code-block:: shell
+
+   nvm install v14
 
 Once this is all done, you should be able to follow the main
 instructions above, starting with cloning the ``pytch-releases``
@@ -132,3 +150,17 @@ super-project.
 If you would like to use Microsoft's VSCode for development work, you
 can run your native Windows VSCode, and access your Ubuntu files using
 a Windows pathname starting ``\\wsl$\Ubuntu\home\your_username\``.
+
+Home directories
+~~~~~~~~~~~~~~~~
+
+Be aware that your Windows home directory and your Ubuntu home
+directory are different.  For example, when setting up SSH keys, you
+need to ensure you are working within your *Ubuntu* home directory.
+After launching WSL, you can use the shell command
+
+.. code-block:: shell
+
+   cd
+
+to change to your Ubuntu home directory.
