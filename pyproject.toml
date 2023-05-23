@@ -10,6 +10,7 @@ packages = []
 python = "^3.10"
 sphinx = "^7.0.0"
 sphinx-autobuild = "^2021.3.14"
+requests = ">=2.31.0"
 
 
 [build-system]
