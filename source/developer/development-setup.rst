@@ -1,6 +1,51 @@
 Getting started with Pytch development
 ======================================
 
+Requirements
+------------
+
+Python 3
+  The build tools, for example for building tutorials, are based on
+  version 3 of Python.  Note that on macOS, you need to have run the
+  ``Install Certificates`` command, as is suggested by the Python
+  installer, to ensure that the Python's package installer ``pip`` can
+  make secure connections.
+
+Poetry
+  For managing Python projects and their dependencies.  See `its web
+  page <https://python-poetry.org/docs/#installation>`_ for
+  installation instructions.
+
+Node.js
+  For building the Skulpt-based VM, and the webapp.  Pytch is
+  developed using the v14 Long Term Support release of Node.js.  The
+  ``npm`` package manager is also required, which usually comes
+  bundled with Node.js.  Your operating system might come with
+  different versions of ``node`` and/or ``npm``.  A convenient way to
+  manage multiple ``node``/``npm`` versions on your machine is to use
+  `the nvm tool <https://github.com/nvm-sh/nvm>`_.
+
+Docker
+  Optional, for :ref:`easy testing of a built
+  zipfile<testing_deployment_zipfile>`.
+
+The ``tmux`` terminal multiplexer
+  The dev-server script requires ``tmux``, which is available for
+  Linux and Mac machines.  It is also available on Windows, under the
+  Windows Subsystem for Linux (:ref:`see below
+  <developing_on_Windows>`).
+
+GNU ``coreutils``
+  The build scripts use ``realpath`` from GNU ``coreutils``.  Most
+  Linux-based systems will install these tools by default.  On macOS
+  you may need to run ``brew install coreutils``.
+
+(This list might be incomplete; please let us know of any gaps.)
+
+
+Source code
+-----------
+
 Pytch source code is available on GitHub, organised into git
 submodules.  The most convenient way to work with it is via the
 superproject:
@@ -51,48 +96,6 @@ directory).
    ``dev-server.sh`` script without typing ``Ctrl-C``\ s.  To fix the
    error, run ``tmux kill-session -t pytchdev`` and then run the
    ``dev-server.sh`` script again.
-
-
-Requirements
-------------
-
-Python 3
-  The build tools, for example for building tutorials, are based on
-  version 3 of Python.  Note that on macOS, you need to have run the
-  ``Install Certificates`` command, as is suggested by the Python
-  installer, to ensure that the Python's package installer ``pip`` can
-  make secure connections.
-
-Poetry
-  For managing Python projects and their dependencies.  See `its web
-  page <https://python-poetry.org/docs/#installation>`_ for
-  installation instructions.
-
-Node.js
-  For building the Skulpt-based VM, and the webapp.  Pytch is
-  developed using the v14 Long Term Support release of Node.js.  The
-  ``npm`` package manager is also required, which usually comes
-  bundled with Node.js.  Your operating system might come with
-  different versions of ``node`` and/or ``npm``.  A convenient way to
-  manage multiple ``node``/``npm`` versions on your machine is to use
-  `the nvm tool <https://github.com/nvm-sh/nvm>`_.
-
-Docker
-  Optional, for :ref:`easy testing of a built
-  zipfile<testing_deployment_zipfile>`.
-
-The ``tmux`` terminal multiplexer
-  The dev-server script requires ``tmux``, which is available for
-  Linux and Mac machines.  It is also available on Windows, under the
-  Windows Subsystem for Linux (:ref:`see below
-  <developing_on_Windows>`).
-
-GNU ``coreutils``
-  The build scripts use ``realpath`` from GNU ``coreutils``.  Most
-  Linux-based systems will install these tools by default.  On macOS
-  you may need to run ``brew install coreutils``.
-
-(This list might be incomplete; please let us know of any gaps.)
 
 
 .. _developing_on_Windows:
