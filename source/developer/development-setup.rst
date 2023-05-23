@@ -135,7 +135,11 @@ Once you have WSL set up, within your Ubuntu distribution run:
    sudo apt install unzip
 
 and then install ``nvm`` following the instructions in `its README
-<https://github.com/nvm-sh/nvm>`_.
+<https://github.com/nvm-sh/nvm>`_ and install node v14 by running
+
+.. code-block:: shell
+
+   nvm install v14
 
 Once this is all done, you should be able to follow the main
 instructions above, starting with cloning the ``pytch-releases``
