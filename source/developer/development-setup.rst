@@ -8,6 +8,9 @@ work on Pytch itself.
 Requirements
 ------------
 
+Git
+  For fetching and working with the source code and related files.
+
 Python 3
   The build tools, for example for building tutorials, are based on
   version 3 of Python.  Note that on macOS, you need to have run the
