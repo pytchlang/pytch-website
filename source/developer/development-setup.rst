@@ -8,6 +8,9 @@ work on Pytch itself.
 Requirements
 ------------
 
+Git
+  For fetching and working with the source code and related files.
+
 Python 3
   The build tools, for example for building tutorials, are based on
   version 3 of Python.  Note that on macOS, you need to have run the
@@ -20,18 +23,19 @@ Python 3
 Poetry
   For managing Python projects and their dependencies.  See `its web
   page <https://python-poetry.org/docs/#installation>`_ for
-  installation instructions.  You might have to update your ``PATH``,
-  for example by adding a line to your ``.bashrc`` file.
+  installation instructions.  **You might have to manually update
+  your** ``PATH``\ **, for example by adding a line to your**
+  ``.bashrc`` **file.**
 
 Node.js
   For building the Skulpt-based VM, and the webapp.  Pytch is
-  developed using the v14 Long Term Support release of Node.js.  The
+  developed using the v18 Long Term Support release of Node.js.  The
   ``npm`` package manager is also required, which usually comes
   bundled with Node.js.  Your operating system might come with
   different versions of ``node`` and/or ``npm``.  A convenient way to
   manage multiple ``node``/``npm`` versions on your machine is to use
   `the nvm tool <https://github.com/nvm-sh/nvm>`_.  After installing
-  ``nvm``, you can do ``nvm install v14`` to set up the appropriate
+  ``nvm``, you can do ``nvm install v18`` to set up the appropriate
   version of node.
 
 Docker
@@ -107,6 +111,15 @@ directory).
    ``dev-server.sh`` script again.
 
 
+Developing on Linux
+-------------------
+
+If, on Ubuntu, you encounter strange errors when trying to install
+``nvm``, check whether ``curl`` has been installed as a Snap.  We have
+seen this lead to the situation where ``curl`` doesn't have permission
+to write files.  Installing ``curl`` via ``apt`` is recommended.
+
+
 .. _developing_on_Windows:
 
 Developing on Windows
@@ -137,11 +150,11 @@ Once you have WSL set up, within your Ubuntu distribution run:
    sudo apt install unzip
 
 and then install ``nvm`` following the instructions in `its README
-<https://github.com/nvm-sh/nvm>`_ and install node v14 by running
+<https://github.com/nvm-sh/nvm>`_ and install node v18 by running
 
 .. code-block:: shell
 
-   nvm install v14
+   nvm install v18
 
 Once this is all done, you should be able to follow the main
 instructions above, starting with cloning the ``pytch-releases``
