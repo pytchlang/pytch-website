@@ -23,8 +23,9 @@ Python 3
 Poetry
   For managing Python projects and their dependencies.  See `its web
   page <https://python-poetry.org/docs/#installation>`_ for
-  installation instructions.  You might have to update your ``PATH``,
-  for example by adding a line to your ``.bashrc`` file.
+  installation instructions.  **You might have to manually update
+  your** ``PATH``\ **, for example by adding a line to your**
+  ``.bashrc`` **file.**
 
 Node.js
   For building the Skulpt-based VM, and the webapp.  Pytch is
