@@ -111,6 +111,15 @@ directory).
    ``dev-server.sh`` script again.
 
 
+Developing on Linux
+-------------------
+
+If, on Ubuntu, you encounter strange errors when trying to install
+``nvm``, check whether ``curl`` has been installed as a Snap.  We have
+seen this lead to the situation where ``curl`` doesn't have permission
+to write files.  Installing ``curl`` via ``apt`` is recommended.
+
+
 .. _developing_on_Windows:
 
 Developing on Windows
