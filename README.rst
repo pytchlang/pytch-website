@@ -6,7 +6,8 @@ Pytch Website Content
 Development setup
 -----------------
 
-This project uses `poetry <https://python-poetry.org/>`_.
+This project uses `poetry <https://python-poetry.org/>`_.  We
+currently use version 1.7.1.
 
 To set up a virtualenv for development and testing::
 
