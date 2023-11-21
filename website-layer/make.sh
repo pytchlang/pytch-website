@@ -85,7 +85,10 @@ done
 # Create content and zip it
 
 poetry env use -q python3
-poetry install
+
+# We use poetry only to install dependencies, not an actual package:
+poetry install --no-root
+
 source "$(poetry env info --path)"/bin/activate
 
 ./bin/make-cleanly.sh
