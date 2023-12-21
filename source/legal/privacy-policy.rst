@@ -18,6 +18,16 @@ Web App can only access files you directly tell it to open or that it
 has created itself.  Any data we access is only used to provide the
 services you have requested.
 
+As is standard practice, we record web-server access logs for the
+requests your browser makes while you use Pytch.  These logs record
+your IP address, your browser’s user-agent string, the referring URL,
+the time of the request, the http request, and the response code and
+size.  We use this information to monitor and analyse how Pytch is
+being used, and to help detect abuse.  We retain the IP address
+information for at most two weeks before deleting it; we retain the
+remainder of the information, which is fully anonymous and contains no
+personally identifying information, for up to two years.
+
 Google Drive access
 -------------------
 
