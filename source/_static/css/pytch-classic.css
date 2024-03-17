@@ -104,6 +104,7 @@ div.sphinxsidebar {
     width: 18rem;
     margin: 0px;
     float: none;
+    border-right: 1px solid #306998;
     background-color: #f0f0f0;
 }
 
