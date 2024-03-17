@@ -59,9 +59,12 @@ body {
     right: 0px;
     top: 0px;
     bottom: 0px;
-    display: flex;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
     flex-direction: column;
 }
+
+div.clearer { display: none; }
 
 div.body p, div.body dd, div.body li, div.body blockquote {
     line-height: 150%;
@@ -70,22 +73,18 @@ div.body p, div.body dd, div.body li, div.body blockquote {
 div.document {
     min-height: 0px;
     flex: 1 1;
-    display: flex;
 
-    /* Sphinx emits the document first then the sidebar, so to get the
-     * sidebar on the left we reverse the flex direction.
-     *
-     * TODO: Look at making it appear in sidebar2 block instead?
-     */
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "sidebar content";
 
     overflow-y: auto;
 }
 
 div.documentwrapper {
+    grid-area: content;
     float: none;
     width: auto;
-    flex: 1 1;
 }
 
 div.bodywrapper {
@@ -97,8 +96,8 @@ div.body > section {
 }
 
 div.sphinxsidebar {
+    grid-area: sidebar;
     width: 18rem;
-    flex: 0 0 auto;
     margin: 0px;
     float: none;
 }
