@@ -1,6 +1,6 @@
 .NavBar {
   flex: 0;
-  background-color: #228;
+  background-color: #306998;
   color: white;
   padding: 4px;
   display: flex;
@@ -20,8 +20,7 @@
     color: white;
 }
 .NavBar h1:hover, .NavBar li:hover {
-    background-color: #44b;
-    border-radius: 4px;
+    color: #fff792;
 }
 .NavBar ul {
     margin: 0px;
@@ -44,7 +43,7 @@
 /******************************************************************************/
 
 div.warning-work-in-progress {
-    background-color: #ff8;
+    background-color: #fff792;
     color: black;
     text-align: center;
 }
@@ -66,11 +65,16 @@ body {
 
 div.clearer { display: none; }
 
+div.body {
+    background-color: #f8f8f8;
+}
+
 div.body p, div.body dd, div.body li, div.body blockquote {
     line-height: 150%;
 }
 
 div.document {
+    background-color: #f8f8f8;
     min-height: 0px;
     flex: 1 1;
 
@@ -100,6 +104,7 @@ div.sphinxsidebar {
     width: 18rem;
     margin: 0px;
     float: none;
+    background-color: #f0f0f0;
 }
 
 div.sphinxsidebar p.caption {
@@ -127,11 +132,11 @@ div.sphinxsidebar ul li.toctree-l1 > a {
 }
 
 div.sphinxsidebar ul li[class*="toctree-"] a.current {
-    background-color: #aaf;
+    background-color: #fff792;
 }
 
 .admonition.caution {
-    background-color: #ffd;
+    background-color: #fff792;
     padding: 1rem;
     margin: 2rem 3rem;
     border-radius: 4px;
@@ -164,7 +169,7 @@ div.document a {
 
 div.document a:hover {
     text-decoration: none;
-    background-color: #99f;
+    background-color: #fff792;
     color: black;
 }
 
