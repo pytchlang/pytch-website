@@ -1,6 +1,6 @@
 .NavBar {
   flex: 0;
-  background-color: #228;
+  background-color: #306998;
   color: white;
   padding: 4px;
   display: flex;
@@ -20,8 +20,7 @@
     color: white;
 }
 .NavBar h1:hover, .NavBar li:hover {
-    background-color: #44b;
-    border-radius: 4px;
+    color: #fff792;
 }
 .NavBar ul {
     margin: 0px;
@@ -44,7 +43,7 @@
 /******************************************************************************/
 
 div.warning-work-in-progress {
-    background-color: #ff8;
+    background-color: #fff792;
     color: black;
     text-align: center;
 }
@@ -59,8 +58,15 @@ body {
     right: 0px;
     top: 0px;
     bottom: 0px;
-    display: flex;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
     flex-direction: column;
+}
+
+div.clearer { display: none; }
+
+div.body {
+    background-color: #f8f8f8;
 }
 
 div.body p, div.body dd, div.body li, div.body blockquote {
@@ -68,24 +74,21 @@ div.body p, div.body dd, div.body li, div.body blockquote {
 }
 
 div.document {
+    background-color: #f8f8f8;
     min-height: 0px;
     flex: 1 1;
-    display: flex;
 
-    /* Sphinx emits the document first then the sidebar, so to get the
-     * sidebar on the left we reverse the flex direction.
-     *
-     * TODO: Look at making it appear in sidebar2 block instead?
-     */
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "sidebar content";
 
     overflow-y: auto;
 }
 
 div.documentwrapper {
+    grid-area: content;
     float: none;
     width: auto;
-    flex: 1 1;
 }
 
 div.bodywrapper {
@@ -97,10 +100,12 @@ div.body > section {
 }
 
 div.sphinxsidebar {
+    grid-area: sidebar;
     width: 18rem;
-    flex: 0 0 auto;
     margin: 0px;
     float: none;
+    border-right: 1px solid #306998;
+    background-color: #f0f0f0;
 }
 
 div.sphinxsidebar p.caption {
@@ -128,11 +133,11 @@ div.sphinxsidebar ul li.toctree-l1 > a {
 }
 
 div.sphinxsidebar ul li[class*="toctree-"] a.current {
-    background-color: #aaf;
+    background-color: #fff792;
 }
 
 .admonition.caution {
-    background-color: #ffd;
+    background-color: #fff792;
     padding: 1rem;
     margin: 2rem 3rem;
     border-radius: 4px;
@@ -165,7 +170,7 @@ div.document a {
 
 div.document a:hover {
     text-decoration: none;
-    background-color: #99f;
+    background-color: #fff792;
     color: black;
 }
 
