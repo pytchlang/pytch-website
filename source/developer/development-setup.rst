@@ -147,7 +147,7 @@ Once you have WSL set up, within your Ubuntu distribution run:
 .. code-block:: shell
 
    sudo apt update
-   sudo apt install unzip
+   sudo apt install zip unzip
 
 and then install ``nvm`` following the instructions in `its README
 <https://github.com/nvm-sh/nvm>`_ and install node v18 by running
