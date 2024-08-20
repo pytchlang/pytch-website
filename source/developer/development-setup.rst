@@ -147,9 +147,19 @@ Once you have WSL set up, within your Ubuntu distribution run:
 .. code-block:: shell
 
    sudo apt update
-   sudo apt install unzip
+   sudo apt install zip unzip
 
-and then install ``nvm`` following the instructions in `its README
+(If the first of these commands gives errors involving
+
+   Temporary failure resolving archive.ubuntu.com
+
+then one possible cause is that your WSL set-up does not have its DNS
+configured correctly.  `This StackExchange superuser post
+<https://superuser.com/questions/1533291/how-do-i-change-the-dns-settings-for-wsl2>`_
+describes the process for using a public DNS server like Cloudflare’s
+``1.1.1.1``, which might fix the problem.)
+
+Then install ``nvm`` following the instructions in `its README
 <https://github.com/nvm-sh/nvm>`_ and install node v18 by running
 
 .. code-block:: shell
