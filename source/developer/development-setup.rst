@@ -106,8 +106,10 @@ directory).
    If you get an error ``duplicate session: pytchdev`` when trying to
    run the ``dev-server.sh`` script, this is probably because you
    closed the terminal window running a previous invocation of the
-   ``dev-server.sh`` script without typing ``Ctrl-C``\ s.  To fix the
-   error, run ``tmux kill-session -t pytchdev`` and then run the
+   ``dev-server.sh`` script without typing ``Ctrl-C``\ s.  This means
+   the ``tmux`` session is still running.  To re-attach to that
+   session, run ``tmux attach -t pytchdev``.  To start a new session,
+   run ``tmux kill-session -t pytchdev`` and then run the
    ``dev-server.sh`` script again.
 
 
