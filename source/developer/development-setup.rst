@@ -122,6 +122,25 @@ seen this lead to the situation where ``curl`` doesn't have permission
 to write files.  Installing ``curl`` via ``apt`` is recommended.
 
 
+Developing on macOS
+-------------------
+
+The preferred way to get a definite version of Python on Mac seems to
+be to use ``homebrew``:
+
+* Install the ``.pkg`` file available from `homebrew’s GitHub
+  releases page <https://github.com/Homebrew/brew/releases/latest>`_.
+  This installs everything under ``/opt/homebrew``, so you have to add
+  ``/opt/homebrew/bin`` to the front of your ``PATH``.
+
+* Do ``brew install python3``.  This prints instructions about the
+  directory to which a ``python`` link has been installed.  Add that
+  directory to the front of your ``PATH``.
+
+* Check that ``python`` at a command prompt gives you the expected
+  installation of Python 3.
+
+
 .. _developing_on_Windows:
 
 Developing on Windows
