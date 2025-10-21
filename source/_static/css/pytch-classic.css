@@ -195,6 +195,13 @@ span.pre {
     padding: 2px;
 }
 
+span.guilabel {
+    background-color: #fff792;
+    font-style: italic;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
 
 /******************************************************************************/
 
