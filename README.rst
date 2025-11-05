@@ -7,7 +7,7 @@ Development setup
 -----------------
 
 This project uses `poetry <https://python-poetry.org/>`_.  We
-currently use version 2.0.0.
+currently use version 2.2.
 
 To set up a virtualenv for development and testing::
 
