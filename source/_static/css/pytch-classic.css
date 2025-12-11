@@ -5,6 +5,7 @@
     background-color: #306998;
     padding: 0 30px;
     font-family: "Hanken Grotesk", sans-serif;
+    box-sizing: border-box;
 }
 
 .NavBarContent {
@@ -308,10 +309,6 @@ div.highlight span.hll {
     padding: 13px 0px;
 }
 
-.NavBar.active {
-    height: 100vh;
-}
-
 #activeMenu {
     display: none;
 }
@@ -324,14 +321,14 @@ div.highlight span.hll {
     margin-top: -5px;
 }
 
+#MobileLinks {
+    display: none;
+    padding-left: 12px;
+}
+
 @media screen and (max-width: 1024px) {
     #DesktopLinks {
         display: none;
-    }
-
-    #MobileLinks {
-        display: none;
-        padding-left: 12px;
     }
 
     #HamburgerMenu {
@@ -347,5 +344,11 @@ div.highlight span.hll {
 
     .NavBar {
         padding: 0 25px 0px 20px;
+    }
+
+    .NavBar.active {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
     }
 }
