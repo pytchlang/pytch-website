@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
 .NavBar {
-    /*width: 100%;*/
     background-color: #306998;
     padding: 0 30px;
     font-family: "Hanken Grotesk", sans-serif;
@@ -12,17 +11,16 @@
   flex: 0;
   background-color: #306998;
   color: white;
-  /*padding: 4px;*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-    height: 70px;
-    padding-right: 30px;
-    max-width: 1200px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    flex-wrap: wrap;
+  height: 70px;
+  padding-right: 30px;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 .NavBarContent a {
     text-decoration: none;
@@ -43,7 +41,6 @@
 }
 .NavBarContent ul li {
     display: inline-block;
-    /*margin-right: 2rem;*/
     padding: 20px;
     font-size: 1rem;
     color: white;
@@ -275,6 +272,10 @@ div.highlight span.hll {
     color: white;
 }
 
+.contact-us-link svg:hover {
+    color: #fff792;
+}
+
 #HamburgerMenu {
     display: none;
     margin-top: -5px;
@@ -284,11 +285,12 @@ div.highlight span.hll {
     color: white;
 }
 
-#activeMenu {
+#ActiveMenu {
     width: 24px;
+    display: none;
 }
 
-#inactiveMenu {
+#InactiveMenu {
     width: 28px;
     margin-right: -3px;
     margin-top: -1px;
@@ -300,7 +302,8 @@ div.highlight span.hll {
 
 #MobileLinks {
     display: none;
-    padding: 10px 0 0;
+    padding: 10px 0 0 12px;
+    flex-basis: 100%;
 }
 
 #MobileLinks a {
@@ -309,21 +312,12 @@ div.highlight span.hll {
     padding: 13px 0px;
 }
 
-#activeMenu {
-    display: none;
-}
-
 #HamburgerMenu svg:hover {
     color: #fff792;
 }
 
 #DesktopLinks {
     margin-top: -5px;
-}
-
-#MobileLinks {
-    display: none;
-    padding-left: 12px;
 }
 
 @media screen and (max-width: 1024px) {
