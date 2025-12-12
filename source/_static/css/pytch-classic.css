@@ -267,9 +267,14 @@ div.highlight span.hll {
     background-color: #ddd;
 }
 
-.contact-us-link svg {
+.NavBarContent ul li svg {
     height: 1em;
+}
+
+.contact-us-link svg {
     color: white;
+    margin-bottom: -2px;
+    height: 1em;
 }
 
 .contact-us-link svg:hover {
