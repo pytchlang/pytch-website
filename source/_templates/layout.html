@@ -11,21 +11,21 @@
 <div class="NavBar">
   <div class="NavBarContent">
     <a href="{{ pathto("../app/", 1) | e }}"><img id="PytchLogo" src="{{ pathto("_static/media/pytch.png", 1) }}" alt="Pytch Logo" height="70" /></a>
-      <ul id="DesktopLinks">
-        <a href="https://pytch.scss.tcd.ie/"><li>About{{ external_link() }}</li></a>
-        <a href="https://pytch.scss.tcd.ie/lesson-plans/"><li>Lesson plans{{ external_link() }}</li></a>
-        <a href="{{ pathto(master_doc) | e }}"><li>Help</li></a>
-        <a href="{{ pathto("../app/tutorials/", 1) | e }}"><li>Tutorials</li></a>
-        <a href="{{ pathto("../app/my-projects/", 1) | e }}"><li>My projects</li></a>
-        <a class="contact-us-link" href="{{ pathto("../app/", 1) | e }}#contact-info" data-discover="true">
-          <li>{{ envelope_icon() }}</li>
-        </a>
-      </ul>
-
-      <a id="HamburgerMenu" href="javascript:void(0);" class="icon" onclick="ToggleMobileNavBar()">
-        <svg id="InactiveMenu" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars" role="img" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg>
-        <svg id="ActiveMenu" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark" role="img" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"></path></svg>
+    <ul id="DesktopLinks">
+      <a href="https://pytch.scss.tcd.ie/"><li>About{{ external_link() }}</li></a>
+      <a href="https://pytch.scss.tcd.ie/lesson-plans/"><li>Lesson plans{{ external_link() }}</li></a>
+      <a href="{{ pathto(master_doc) | e }}"><li>Help</li></a>
+      <a href="{{ pathto("../app/tutorials/", 1) | e }}"><li>Tutorials</li></a>
+      <a href="{{ pathto("../app/my-projects/", 1) | e }}"><li>My projects</li></a>
+      <a class="contact-us-link" href="{{ pathto("../app/", 1) | e }}#contact-info" data-discover="true">
+        <li>{{ envelope_icon() }}</li>
       </a>
+    </ul>
+
+    <a id="HamburgerMenu" href="javascript:void(0);" class="icon" onclick="ToggleMobileNavBar()">
+      <svg id="InactiveMenu" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars" role="img" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg>
+      <svg id="ActiveMenu" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark" role="img" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"></path></svg>
+    </a>
 
     <ul id="MobileLinks">
       <a href="https://pytch.scss.tcd.ie/"><li>About{{ external_link() }}</li></a>
@@ -40,23 +40,26 @@
 
     <script>
       function ToggleMobileNavBar() {
-        if (document.getElementById('MobileLinks').style.display === '' || document.getElementById('MobileLinks').style.display === 'none') {
+        if (
+          document.getElementById('MobileLinks').style.display === ''
+          || document.getElementById('MobileLinks').style.display === 'none'
+        ) {
           // open mobile navigation menu
-          document.getElementById('MobileLinks').style.display= 'block';
+          document.getElementById('MobileLinks').style.display = 'block';
           document.getElementsByClassName('NavBar')[0].classList.add('active');
-          document.getElementById('InactiveMenu').style.display='none';
-          document.getElementById('ActiveMenu').style.display='block';
+          document.getElementById('InactiveMenu').style.display = 'none';
+          document.getElementById('ActiveMenu').style.display = 'block';
         } else {
           // close mobile navigation menu
-          document.getElementById('MobileLinks').style.display= 'none';
+          document.getElementById('MobileLinks').style.display = 'none';
           document.getElementsByClassName('NavBar')[0].classList.remove('active');
-          document.getElementById('InactiveMenu').style.display='block';
-          document.getElementById('ActiveMenu').style.display='none';
+          document.getElementById('InactiveMenu').style.display = 'block';
+          document.getElementById('ActiveMenu').style.display = 'none';
         }
       }
     </script>
   </div>
-    </div>
+</div>
 <div class="warning-work-in-progress">
   <p>These help pages are incomplete — we are working on it!</p>
 </div>
