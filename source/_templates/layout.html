@@ -12,20 +12,14 @@
   <div class="NavBarContent">
     <a href="{{ pathto("../app/", 1) | e }}"><img id="PytchLogo" src="{{ pathto("_static/media/pytch.png", 1) }}" alt="Pytch Logo" height="70" /></a>
       <ul id="DesktopLinks">
-        <a href="https://pytch.scss.tcd.ie/">
-          <li>About
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / External_Link"> <path id="Vector" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
-          </li>
-        </a>
-        <a href="https://pytch.scss.tcd.ie/lesson-plans/">
-          <li>Lesson plans
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / External_Link"> <path id="Vector" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
-          </li>
-        </a>
+        <a href="https://pytch.scss.tcd.ie/"><li>About{{ external_link() }}</li></a>
+        <a href="https://pytch.scss.tcd.ie/lesson-plans/"><li>Lesson plans{{ external_link() }}</li></a>
         <a href="{{ pathto(master_doc) | e }}"><li>Help</li></a>
         <a href="{{ pathto("../app/tutorials/", 1) | e }}"><li>Tutorials</li></a>
         <a href="{{ pathto("../app/my-projects/", 1) | e }}"><li>My projects</li></a>
-        <a class="contact-us-link" href="{{ pathto("../app/#contact-info", 1) | e }}" data-discover="true"><li><svg data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M61.4 64C27.5 64 0 91.5 0 125.4 0 126.3 0 127.1 .1 128L0 128 0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256-.1 0c0-.9 .1-1.7 .1-2.6 0-33.9-27.5-61.4-61.4-61.4L61.4 64zM464 192.3L464 384c0 8.8-7.2 16-16 16L64 400c-8.8 0-16-7.2-16-16l0-191.7 154.8 117.4c31.4 23.9 74.9 23.9 106.4 0L464 192.3zM48 125.4C48 118 54 112 61.4 112l389.2 0c7.4 0 13.4 6 13.4 13.4 0 4.2-2 8.2-5.3 10.7L280.2 271.5c-14.3 10.8-34.1 10.8-48.4 0L53.3 136.1c-3.3-2.5-5.3-6.5-5.3-10.7z"></path></svg></li></a>
+        <a class="contact-us-link" href="{{ pathto("../app/", 1) | e }}#contact-info" data-discover="true">
+          <li>{{ envelope_icon() }}</li>
+        </a>
       </ul>
 
       <a id="HamburgerMenu" href="javascript:void(0);" class="icon" onclick="ToggleMobileNavBar()">
@@ -34,20 +28,14 @@
       </a>
 
     <ul id="MobileLinks">
-      <a href="https://pytch.scss.tcd.ie/">
-        <li>About
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / External_Link"> <path id="Vector" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
-        </li>
-      </a>
-      <a href="https://pytch.scss.tcd.ie/lesson-plans/">
-        <li>Lesson plans
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / External_Link"> <path id="Vector" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
-        </li>
-      </a>
+      <a href="https://pytch.scss.tcd.ie/"><li>About{{ external_link() }}</li></a>
+      <a href="https://pytch.scss.tcd.ie/lesson-plans/"><li>Lesson plans{{ external_link() }}</li></a>
       <a href="{{ pathto(master_doc) | e }}"><li>Help</li></a>
       <a href="{{ pathto("../app/tutorials/", 1) | e }}"><li>Tutorials</li></a>
       <a href="{{ pathto("../app/my-projects/", 1) | e }}"><li>My projects</li></a>
-      <a class="contact-us-link" href="{{ pathto("../app/#contact-info", 1) | e }}" data-discover="true"><svg data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M61.4 64C27.5 64 0 91.5 0 125.4 0 126.3 0 127.1 .1 128L0 128 0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256-.1 0c0-.9 .1-1.7 .1-2.6 0-33.9-27.5-61.4-61.4-61.4L61.4 64zM464 192.3L464 384c0 8.8-7.2 16-16 16L64 400c-8.8 0-16-7.2-16-16l0-191.7 154.8 117.4c31.4 23.9 74.9 23.9 106.4 0L464 192.3zM48 125.4C48 118 54 112 61.4 112l389.2 0c7.4 0 13.4 6 13.4 13.4 0 4.2-2 8.2-5.3 10.7L280.2 271.5c-14.3 10.8-34.1 10.8-48.4 0L53.3 136.1c-3.3-2.5-5.3-6.5-5.3-10.7z"></path></svg></a>
+      <a class="contact-us-link" href="{{ pathto("../app/", 1) | e }}#contact-info" data-discover="true">
+        <li>{{ envelope_icon() }}</li>
+      </a>
     </ul>
 
     <script>
