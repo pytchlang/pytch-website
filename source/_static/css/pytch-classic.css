@@ -272,6 +272,7 @@ div.highlight span.hll {
 }
 
 .NavBarContent ul li:hover svg {
+    color: #fff792;
     stroke: #fff792;
 }
 
