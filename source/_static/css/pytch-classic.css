@@ -1,17 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
 .NavBar {
+    background-color: #306998;
+    font-family: "Hanken Grotesk", sans-serif;
+    box-sizing: border-box;
+}
+
+.NavBarContent {
   flex: 0;
   background-color: #306998;
   color: white;
-  padding: 4px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 70px;
+  padding: 0 30px;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
-.NavBar a {
+.NavBarContent a {
     text-decoration: none;
 }
-.NavBar h1 {
+.NavBarContent h1 {
     padding: 8px;
     margin: 0px 2rem;
     font-family: inherit;
@@ -19,22 +32,21 @@
     font-weight: bold;
     color: white;
 }
-.NavBar h1:hover, .NavBar li:hover {
+.NavBarContent h1:hover, .NavBarContent li:hover {
     color: #fff792;
 }
-.NavBar ul {
+.NavBarContent ul {
     margin: 0px;
 }
-.NavBar ul li {
+.NavBarContent ul li {
     display: inline-block;
-    margin-right: 2rem;
-    padding: 8px;
-    font-size: 1.25rem;
+    padding: 19px;
+    font-size: 1rem;
     color: white;
     cursor: pointer;
     user-select: none;
 }
-.NavBar ul li a {
+.NavBarContent ul li a {
     color: white;
     text-decoration: none;
 }
@@ -252,4 +264,91 @@ code.descclassname, code.descname {
 
 div.highlight span.hll {
     background-color: #ddd;
+}
+
+.NavBarContent ul li svg {
+    height: 1em;
+}
+
+.contact-us-link svg {
+    color: white;
+    margin-bottom: -2px;
+    height: 1em;
+}
+
+.contact-us-link svg:hover {
+    color: #fff792;
+}
+
+#HamburgerMenu {
+    display: none;
+    margin-top: -5px;
+}
+
+#HamburgerMenu svg {
+    color: white;
+}
+
+#ActiveMenu {
+    width: 24px;
+    display: none;
+}
+
+#InactiveMenu {
+    width: 28px;
+    margin-right: -3px;
+    margin-top: -2px;
+    display: block;
+}
+
+#PytchLogo {
+    max-width: none;
+}
+
+#MobileLinks {
+    display: none;
+    padding: 10px 0 0 12px;
+    flex-basis: 100%;
+}
+
+#MobileLinks a {
+    width: 100%;
+    display: block;
+    padding: 13px 0px;
+}
+
+#HamburgerMenu svg:hover {
+    color: #fff792;
+}
+
+#DesktopLinks {
+    margin-top: -5px;
+    margin-right: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+    #DesktopLinks {
+        display: none;
+    }
+
+    #HamburgerMenu {
+        display: block;
+    }
+
+    .NavBarContent {
+        padding: 0;
+    }
+    .NavBarContent ul li {
+        padding: 0;
+    }
+
+    .NavBar {
+        padding: 0 25px 0px 20px;
+    }
+
+    .NavBar.active {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+    }
 }
