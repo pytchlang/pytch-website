@@ -2,7 +2,6 @@
 
 .NavBar {
     background-color: #306998;
-    padding: 0 30px;
     font-family: "Hanken Grotesk", sans-serif;
     box-sizing: border-box;
 }
@@ -16,7 +15,7 @@
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  padding-right: 30px;
+  padding: 0 30px;
   max-width: 1200px;
   box-sizing: border-box;
   margin: 0 auto;
@@ -298,7 +297,8 @@ div.highlight span.hll {
 #InactiveMenu {
     width: 28px;
     margin-right: -3px;
-    margin-top: -1px;
+    margin-top: -2px;
+    display: block;
 }
 
 #PytchLogo {
@@ -323,10 +323,7 @@ div.highlight span.hll {
 
 #DesktopLinks {
     margin-top: -5px;
-}
-
-.NavBarContent ul .contact-us-link li {
-    padding-right: 0;
+    margin-right: 12px;
 }
 
 @media screen and (max-width: 1024px) {
