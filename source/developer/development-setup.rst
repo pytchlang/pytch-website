@@ -100,11 +100,29 @@ You should see messages indicating progress.
 
 You only need to run ``develop.sh`` once.
 
-The ``dev-server.sh`` script should launch various webservers, and
-launch a browser running the webapp.  This should support live reload,
-so if you make a small visible change to the UI, for example changing
-a button's text, it should be reflected in the browser within a couple
-of seconds of saving the file from your editor/IDE.
+Running locally
+~~~~~~~~~~~~~~~
+
+Once set up as above, you can run a ``dev-server.sh`` script with
+
+.. code-block:: shell
+
+   # Do this every time you want to do some development work:
+   cd "$HOME"/pytch
+   ./pytch-build/makesite/local-server/dev-server.sh
+
+which should launch various webservers.  You need a moderately tall
+terminal window to be able to see all the panels, and you should
+investigate anything that looks like an error.
+
+You can then direct your browser to::
+
+   http://localhost:3000/
+
+to see the webapp.  This should support live reload, so if you make a
+small visible change to the UI, for example changing a button's text,
+it should be reflected in the browser within a couple of seconds of
+saving the file from your editor/IDE.
 
 To exit, type ``Ctrl-C`` repeatedly until you're back at your shell
 prompt.
