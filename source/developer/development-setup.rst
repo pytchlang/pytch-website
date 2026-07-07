@@ -65,16 +65,38 @@ Source code
    :ref:`developing_on_Windows` below for suggestions.
 
 Pytch source code is available on GitHub, organised into git
-submodules.  The most convenient way to work with it is via the
-superproject:
+submodules.  The top-level superproject is `pytch-releases on GitHub
+<https://github.com/pytchlang/pytch-releases/>`_.  There are also two
+separate repositories used to maintain the catalogue of "discoverable
+demos".
 
-* `pytch-releases on GitHub <https://github.com/pytchlang/pytch-releases/>`_
+Setting up for development
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To start work on developing Pytch itself, clone this project, and run
-the top-level ``develop.sh`` script.  This will first initialise and
-update the submodules' content, and will appear to be doing nothing
-for a short while.  You should then see messages indicating progress,
-finishing with a suggestion to run a ``dev-server.sh`` script.
+To start work on developing Pytch, we recommend you clone these repos
+as siblings inside a fresh directory (aka "folder"):
+
+.. code-block:: shell
+
+   cd "$HOME"
+   mkdir pytch
+   cd pytch
+   git clone https://github.com/pytchlang/pytch-releases.git
+   git clone https://github.com/pytchlang/pytch-demo-catalogue-content.git
+   git clone https://github.com/pytchlang/pytch-demo-catalogue-build-tool.git
+
+and then run the top-level ``develop.sh`` script:
+
+.. code-block:: shell
+
+   # Only do this once, when setting up your development environment:
+   cd "$HOME"/pytch/pytch-releases
+   ./develop.sh
+
+This will first initialise and update the submodules' content, which
+will appear to be doing nothing for a short while.  The script will
+then do various initialisation operations for the different repos.
+You should see messages indicating progress.
 
 You only need to run ``develop.sh`` once.
 
