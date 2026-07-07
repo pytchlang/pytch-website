@@ -59,30 +59,70 @@ GNU ``coreutils``
 Source code
 -----------
 
-Pytch source code is available on GitHub, organised into git
-submodules.  The most convenient way to work with it is via the
-superproject:
-
-* `pytch-releases on GitHub <https://github.com/pytchlang/pytch-releases/>`_
-
 .. note::
 
    If you are developing on a Windows machine, see
    :ref:`developing_on_Windows` below for suggestions.
 
-To start work on developing Pytch itself, clone this project, and run
-the top-level ``develop.sh`` script.  This will first initialise and
-update the submodules' content, and will appear to be doing nothing
-for a short while.  You should then see messages indicating progress,
-finishing with a suggestion to run a ``dev-server.sh`` script.
+Pytch source code is available on GitHub, organised into git
+submodules.  The top-level superproject is `pytch-releases on GitHub
+<https://github.com/pytchlang/pytch-releases/>`_.  There are also two
+separate repositories used to maintain the catalogue of "discoverable
+demos".
+
+Setting up for development
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To start work on developing Pytch, we recommend you clone these repos
+as siblings inside a fresh directory (aka "folder"):
+
+.. code-block:: shell
+
+   cd "$HOME"
+   mkdir pytch
+   cd pytch
+   git clone https://github.com/pytchlang/pytch-releases.git
+   git clone https://github.com/pytchlang/pytch-demo-catalogue-content.git
+   git clone https://github.com/pytchlang/pytch-demo-catalogue-build-tool.git
+
+and then run the top-level ``develop.sh`` script:
+
+.. code-block:: shell
+
+   # Only do this once, when setting up your development environment:
+   cd "$HOME"/pytch/pytch-releases
+   ./develop.sh
+
+This will first initialise and update the submodules' content, which
+will appear to be doing nothing for a short while.  The script will
+then do various initialisation operations for the different repos.
+You should see messages indicating progress.
 
 You only need to run ``develop.sh`` once.
 
-The ``dev-server.sh`` script should launch various webservers, and
-launch a browser running the webapp.  This should support live reload,
-so if you make a small visible change to the UI, for example changing
-a button's text, it should be reflected in the browser within a couple
-of seconds of saving the file from your editor/IDE.
+Running locally
+~~~~~~~~~~~~~~~
+
+Once set up as above, you can run a ``dev-server.sh`` script with
+
+.. code-block:: shell
+
+   # Do this every time you want to do some development work:
+   cd "$HOME"/pytch
+   ./pytch-build/makesite/local-server/dev-server.sh
+
+which should launch various webservers.  You need a moderately tall
+terminal window to be able to see all the panels, and you should
+investigate anything that looks like an error.
+
+You can then direct your browser to::
+
+   http://localhost:3000/
+
+to see the webapp.  This should support live reload, so if you make a
+small visible change to the UI, for example changing a button's text,
+it should be reflected in the browser within a couple of seconds of
+saving the file from your editor/IDE.
 
 To exit, type ``Ctrl-C`` repeatedly until you're back at your shell
 prompt.
