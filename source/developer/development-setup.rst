@@ -59,16 +59,16 @@ GNU ``coreutils``
 Source code
 -----------
 
+.. note::
+
+   If you are developing on a Windows machine, see
+   :ref:`developing_on_Windows` below for suggestions.
+
 Pytch source code is available on GitHub, organised into git
 submodules.  The most convenient way to work with it is via the
 superproject:
 
 * `pytch-releases on GitHub <https://github.com/pytchlang/pytch-releases/>`_
-
-.. note::
-
-   If you are developing on a Windows machine, see
-   :ref:`developing_on_Windows` below for suggestions.
 
 To start work on developing Pytch itself, clone this project, and run
 the top-level ``develop.sh`` script.  This will first initialise and
